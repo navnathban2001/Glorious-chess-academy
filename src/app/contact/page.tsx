@@ -4,7 +4,7 @@ import React from "react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import SubHero from "@/components/subhero";
-import { Mail, Phone, MapPin, Send, MessageSquare } from "lucide-react";
+import { Mail, Phone, MapPin, Send, MessageSquare, User } from "lucide-react";
 
 export default function ContactPage() {
   return (
@@ -33,8 +33,8 @@ export default function ContactPage() {
                 { icon: Mail, label: "Email Support", text: "support@gloriouschessacademy.com" },
                 { icon: MapPin, label: "Our Office", text: "Ambad Rd, behind Sai Kirti hotel, Prayag Nagar, Old Jalna, Jalna, 431203" }
               ].map((item, idx) => (
-                <div key={idx} className="flex gap-6 group">
-                  <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-primary border border-white/10 group-hover:bg-primary group-hover:bg-opacity-20 group-hover:border-primary/40 transition-all">
+                <div key={idx} className="flex gap-6 group items-start">
+                  <div className="w-16 h-16 shrink-0 rounded-2xl bg-white/5 flex items-center justify-center text-primary border border-white/10 group-hover:bg-primary group-hover:bg-opacity-20 group-hover:border-primary/40 group-hover:text-white transition-all">
                     <item.icon size={24} />
                   </div>
                   <div>
@@ -53,30 +53,39 @@ export default function ContactPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="space-y-3">
                     <label className="text-sm font-bold uppercase tracking-widest text-gray-500 ml-2">Full Name</label>
-                    <input 
-                      type="text" 
-                      placeholder="Jane Doe"
-                      className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 focus:border-primary outline-none transition-all"
-                    />
+                    <div className="relative group">
+                      <User className="absolute left-4 top-1/2 -translate-y-1/2 text-primary opacity-50 group-focus-within:opacity-100 transition-opacity" size={16} />
+                      <input 
+                        type="text" 
+                        placeholder="Jane Doe"
+                        className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 pl-12 focus:border-primary outline-none transition-all"
+                      />
+                    </div>
                   </div>
                   <div className="space-y-3">
                     <label className="text-sm font-bold uppercase tracking-widest text-gray-500 ml-2">Email Address</label>
-                    <input 
-                      type="email" 
-                      placeholder="jane@example.com"
-                      className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 focus:border-primary outline-none transition-all"
-                    />
+                    <div className="relative group">
+                      <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-primary opacity-50 group-focus-within:opacity-100 transition-opacity" size={16} />
+                      <input 
+                        type="email" 
+                        placeholder="jane@example.com"
+                        className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 pl-12 focus:border-primary outline-none transition-all"
+                      />
+                    </div>
                   </div>
                 </div>
 
                 <div className="space-y-3">
                   <label className="text-sm font-bold uppercase tracking-widest text-gray-500 ml-2">Subject</label>
-                  <select className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 focus:border-primary outline-none transition-all appearance-none">
-                    <option>General Inquiry</option>
-                    <option>Enrollment Question</option>
-                    <option>Technical Support</option>
-                    <option>Partnership</option>
-                  </select>
+                  <div className="relative group">
+                    <MessageSquare className="absolute left-4 top-1/2 -translate-y-1/2 text-primary opacity-50 group-focus-within:opacity-100 transition-opacity" size={16} />
+                    <select className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 pl-12 focus:border-primary outline-none transition-all appearance-none">
+                      <option className="text-black">General Inquiry</option>
+                      <option className="text-black">Enrollment Question</option>
+                      <option className="text-black">Technical Support</option>
+                      <option className="text-black">Partnership</option>
+                    </select>
+                  </div>
                 </div>
 
                 <div className="space-y-3">

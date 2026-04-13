@@ -6,32 +6,36 @@ import { ChevronDown, MessageCircle } from "lucide-react";
 
 const faqs = [
   {
-    question: "Are the classes online or at your center?",
-    answer: "Our classes are exclusively online and live, ensuring an interactive learning environment that combines professional instruction with the convenience of learning from home.",
+    question: "WHERE DO I FIND DETAILS ABOUT THE COURSES YOU OFFER?",
+    answer: "Classes are conducted through online live classroom.Weekly classes are lasting 45 min to 1 hour (2 classes).Followed by assignments/ practice/ tournaments sessions.Your child will receive a certificate upon completion from Glorious Chess Academy, India.",
   },
   {
-    question: "Do you provide certificates after the course?",
-    answer: "Yes, students receive an official certificate from Glorious Chess Academy upon the successful completion of each level, following a verifying assessment test.",
+    question: "HOW LONG WILL MY CHILD HAVE ACCESS TO THEIR ACCOUNT AND CONTACT THE COACH FOR SUPPORT?",
+    answer: "As long as your subscription is up to date, you will always have access to the classes and the Coach. The Coach will share the class schedule and relevant information on how to reach him/her for questions with you.",
   },
   {
-    question: "How are students placed into different levels?",
-    answer: "New students begin with a free trial class where our coaches evaluate their child's understanding and interest level to place them in Beginner, Intermediate, or Pro groups.",
+    question: "I´D HOPE THAT WITH TIME MY CHILD TRANSITIONS TO PROFESSIONAL CHESS?",
+    answer: "Yes! Our courses are designed to help your child progressively improve their skill and performance as a Chess player. The Grandmaster course is designed to nurture pro players.",
   },
   {
-    question: "How long can we access the course material?",
-    answer: "Enrollment grants access to our curriculum portal and mobile app for as long as your subscription is active, with continuous coach support.",
+    question: "WHAT IF MY CHILD HAS NO PRIOR EXPOSURE TO CHESS?",
+    answer: "The trial class is designed to help the Coach determine your child’s skill level, learning style, and level of interest. If the Coach determines that your child is a beginner, then he/she will be placed in an appropriate class.",
   },
   {
-    question: "What is your teaching methodology?",
-    answer: "We use a step-by-step approach starting from the basics, focusing on strategic concepts followed by practice assignments and weekly internal tournaments.",
+    question: "I WANT TO ENROLL MY KID INTO GLORIOUS CHESS ACADEMY; WHERE DO I START?",
+    answer: "Follow these quick steps:Complete the enrollment form. Our team will contact you to schedule a trial class. What you can expect in trial class.Once you complete the trial class, based on Coach’s evaluation – we will contact you to understand your interest in enrolling your child for a chess class.Your child’s instructor will be the Coach that handled your child’s trial class.Once you are good to go with the timing and other considerations, we will send you the enrollment confirmation email and invoice. We will ask you to make the payment to a bank account in India.",
   },
   {
-    question: "Are classes based on age groups?",
-    answer: "No, we group students by their understanding of chess (skill level) rather than age, ensuring that peers learn at a similar pace.",
+    question: "WILL MY CHILD RECEIVE A CERTIFICATE UPON COMPLETION OF A LEVEL?",
+    answer: "Yes! The Coach will administer an assessment test to gauge understanding concepts before promoting your child to the next level. Upon qualification, your child will earn a Glorious Chess Academy.",
   },
   {
-    question: "How do I enroll my child?",
-    answer: "The process is simple: 1. Fill out the enrollment form. 2. Attend a free trial class for evaluation. 3. Receive group placement and invoice for confirmation.",
+    question: "WHY AM I SEEING CHILDREN OF DIFFERENT AGE GROUPS IN MY CHILD’S CLASS?",
+    answer: "At Glorious Chess Academy, we organize classes not based on age but based on the level of understanding. We assign classes and group kids according to the Coach’s evaluation during the trial classes. We have three main levels: Beginner, Intermediate, and Pro.",
+  },
+  {
+    question: "HOW IS THE CURRICULUM STRUCTURED AND HOW LONG DOES IT TAKE FOR MY KIDS TO GET TO THE NEXT LEVEL?",
+    answer: "It depends on the kids. We don’t push kids to move levels but rather look at their passion and support them so they can excel in Chess. However, we have put in a tentative duration of the course and you can find it here.",
   },
 ];
 

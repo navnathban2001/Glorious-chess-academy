@@ -25,13 +25,6 @@ export default function SubHero({ title, subtitle }: SubHeroProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          {/* Breadcrumbs */}
-          <div className="flex items-center justify-center space-x-3 text-sm font-bold uppercase tracking-[0.2em] text-gray-500 mb-6">
-            <Link href="/" className="hover:text-primary transition-colors">Home</Link>
-            <ChevronRight size={14} className="text-primary" />
-            <span className="text-white">{title}</span>
-          </div>
-
           <h1 className="text-5xl md:text-7xl font-black italic tracking-tighter uppercase leading-none">
             {title.split(" ").map((word, i) => (
               <span key={i} className={i % 2 !== 0 ? "text-primary" : ""}>

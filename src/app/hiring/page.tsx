@@ -84,7 +84,7 @@ export default function HiringPage() {
                        <User className="absolute left-4 top-1/2 -translate-y-1/2 text-primary opacity-50 group-focus-within:opacity-100 transition-opacity" size={16} />
                        <input 
                          type="text" 
-                         className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 pl-12 focus:border-primary outline-none transition-all placeholder:text-gray-700"
+                         className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 pl-12 focus:border-primary outline-none transition-all placeholder:text-gray-400"
                          placeholder="Full Name"
                        />
                     </div>
@@ -95,7 +95,7 @@ export default function HiringPage() {
                        <Phone className="absolute left-4 top-1/2 -translate-y-1/2 text-primary opacity-50 group-focus-within:opacity-100 transition-opacity" size={16} />
                        <input 
                          type="tel" 
-                         className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 pl-12 focus:border-primary outline-none transition-all placeholder:text-gray-700"
+                         className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 pl-12 focus:border-primary outline-none transition-all placeholder:text-gray-400"
                          placeholder="Mobile Number"
                        />
                     </div>
@@ -108,7 +108,7 @@ export default function HiringPage() {
                      <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-primary opacity-50 group-focus-within:opacity-100 transition-opacity" size={16} />
                      <input 
                        type="email" 
-                       className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 pl-12 focus:border-primary outline-none transition-all placeholder:text-gray-700"
+                       className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 pl-12 focus:border-primary outline-none transition-all placeholder:text-gray-400"
                        placeholder="Email Address"
                      />
                   </div>
@@ -120,7 +120,7 @@ export default function HiringPage() {
                      <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 text-primary opacity-50 group-focus-within:opacity-100 transition-opacity" size={16} />
                      <input 
                        type="text" 
-                       className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 pl-12 focus:border-primary outline-none transition-all placeholder:text-gray-700"
+                       className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 pl-12 focus:border-primary outline-none transition-all placeholder:text-gray-400"
                        placeholder="Street Address"
                      />
                   </div>
@@ -131,7 +131,7 @@ export default function HiringPage() {
                      <Home className="absolute left-4 top-1/2 -translate-y-1/2 text-primary opacity-50 group-focus-within:opacity-100 transition-opacity" size={16} />
                      <input 
                        type="text" 
-                       className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 pl-12 focus:border-primary outline-none transition-all placeholder:text-gray-700"
+                       className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 pl-12 focus:border-primary outline-none transition-all placeholder:text-gray-400"
                        placeholder="Apartment, suite, etc"
                      />
                   </div>
@@ -140,12 +140,12 @@ export default function HiringPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <input 
                     type="text" 
-                    className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 focus:border-primary outline-none transition-all placeholder:text-gray-700"
+                    className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 focus:border-primary outline-none transition-all placeholder:text-gray-400"
                     placeholder="City"
                   />
                   <input 
                     type="text" 
-                    className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 focus:border-primary outline-none transition-all placeholder:text-gray-700"
+                    className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 focus:border-primary outline-none transition-all placeholder:text-gray-400"
                     placeholder="State/Province"
                   />
                 </div>
@@ -153,7 +153,7 @@ export default function HiringPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <input 
                     type="text" 
-                    className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 focus:border-primary outline-none transition-all placeholder:text-gray-700"
+                    className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 focus:border-primary outline-none transition-all placeholder:text-gray-400"
                     placeholder="ZIP / Postal Code"
                   />
                   <select className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 focus:border-primary outline-none transition-all text-gray-500">
@@ -167,10 +167,10 @@ export default function HiringPage() {
                 <div className="space-y-2">
                   <label className="text-[10px] font-black uppercase tracking-widest text-gray-500 ml-4">Fide Profile *</label>
                   <div className="relative group">
-                     <Globe className="absolute left-4 top-15 translate-y-4 text-primary opacity-50" size={16} />
+                     <Globe className="absolute left-4 top-1/2 -translate-y-1/2 text-primary opacity-50 group-focus-within:opacity-100 transition-opacity" size={16} />
                      <input 
                        type="url" 
-                       className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 pl-12 focus:border-primary outline-none transition-all placeholder:text-gray-700"
+                       className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 pl-12 focus:border-primary outline-none transition-all placeholder:text-gray-400"
                        placeholder="https://ratings.fide.com/..."
                      />
                   </div>
@@ -179,7 +179,7 @@ export default function HiringPage() {
                 <div className="space-y-2">
                   <label className="text-[10px] font-black uppercase tracking-widest text-gray-500 ml-4">Coach Profile *</label>
                   <textarea 
-                    className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 focus:border-primary outline-none transition-all placeholder:text-gray-700 h-32 resize-none"
+                    className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 focus:border-primary outline-none transition-all placeholder:text-gray-400 h-32 resize-none"
                     placeholder="Coach Profile *"
                   />
                 </div>

@@ -84,7 +84,7 @@ export default function AchievementsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {milestones.map((item, idx) => (
               <div key={idx} className="glass p-12 rounded-[2.5rem] relative group border-white/5 hover:border-primary/20 transition-all">
-                <div className="absolute top-8 right-8 text-primary font-black text-3xl opacity-20 group-hover:opacity-40 transition-opacity">
+                <div className="absolute top-8 right-8 text-primary font-black text-4xl group-hover:scale-110 transition-all duration-300 drop-shadow-[0_0_15px_rgba(184,134,11,0.5)]">
                   {item.year}
                 </div>
                 <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-8 shadow-inner">
