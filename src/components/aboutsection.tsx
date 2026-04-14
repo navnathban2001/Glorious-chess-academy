@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Award, Shield, Target } from "lucide-react";
+import { Award, Shield, Target, Users } from "lucide-react";
 
 export default function AboutSection() {
   return (
@@ -40,49 +40,57 @@ export default function AboutSection() {
           className="lg:w-1/2"
         >
           <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-bold uppercase tracking-widest mb-6">
-            About Our Academy
+             Why Choose Us
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-            Quality over Quantity: <br />
-            <span className="text-primary italic">Excellence in Chess</span>
+          <h2 className="text-4xl md:text-5xl font-black mb-10 leading-tight uppercase italic tracking-tighter">
+            Elevate Your Game with <br />
+            <span className="text-primary">FIDE Standards</span>
           </h2>
-          <p className="text-gray-400 text-lg mb-10 leading-relaxed">
-            Founded by FIDE rated coaches, Glorious Chess Academy is dedicated to
-            nurturing the next generation of grandmasters. We provide a safe,
-            intellectual environment where players of all ages can solve terminal
-            problems and master the art of strategy.
+          <p className="text-gray-400 text-lg mb-12 leading-relaxed font-medium">
+            Glorious Chess Academy is committed to developing chess talent through 
+            structured training, expert mentorship, and competitive exposure. 
+            Our programs are led by FIDE-rated coaches, ensuring that every 
+            student receives world-class chess education.
           </p>
 
-          <div className="space-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               {
                 icon: Award,
-                title: "FIDE International Rating Success",
-                description: "Our student Vedant Sachin Hingole achieved an international FIDE rating in 2023, showcasing our world-class training results.",
+                title: "FIDE Certified Coaches",
+                description: "Learn from FIDE-rated & certified coaches with international expertise.",
               },
               {
                 icon: Target,
-                title: "FIDE-Rated Professional Coaches",
-                description: "Our team is led by FIDE-rated instructors who bring international standards and elite strategic insights to every class.",
+                title: "Structured Curriculum",
+                description: "Comprehensive roadmap designed for every skill level (Beginner → Advanced).",
               },
               {
                 icon: Shield,
-                title: "Skill-Based Peer Learning",
-                description: "Students are grouped by skill evaluation (Beginner, Intermediate, Pro) rather than age for the most effective peer learning environment.",
+                title: "Live Classes & Tournaments",
+                description: "Interactive online sessions paired with regular tournament exposure.",
+              },
+              {
+                icon: Target,
+                title: "Tracking & Certificates",
+                description: "Detailed performance tracking and official recognition certificates.",
+              },
+              {
+                icon: Users,
+                title: "Dedicated Support",
+                description: "Personalized support for both individual students and academy partners.",
               },
             ].map((item, idx) => (
               <motion.div 
                 key={idx} 
-                whileHover={{ x: 10 }}
-                className="flex gap-6 group"
+                whileHover={{ y: -5 }}
+                className="glass p-6 rounded-2xl border-white/5 hover:border-primary/20 transition-all group"
               >
-                <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:bg-primary/20 group-hover:border-primary/40 transition-all duration-300">
-                  <item.icon className="text-primary" size={28} />
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4 border border-primary/20 group-hover:bg-primary group-hover:text-white transition-all">
+                  <item.icon size={20} />
                 </div>
-                <div>
-                  <h4 className="text-2xl font-bold mb-2 italic tracking-tight uppercase">{item.title}</h4>
-                  <p className="text-gray-500 text-lg leading-relaxed">{item.description}</p>
-                </div>
+                <h4 className="text-xl font-bold mb-2 uppercase italic tracking-tight">{item.title}</h4>
+                <p className="text-gray-500 text-sm leading-relaxed">{item.description}</p>
               </motion.div>
             ))}
           </div>

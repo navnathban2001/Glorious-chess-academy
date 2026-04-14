@@ -4,26 +4,29 @@ import React from "react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import SubHero from "@/components/subhero";
-import { Mail, Phone, MapPin, Send, MessageSquare, User } from "lucide-react";
+import { Mail, Phone, MapPin, MessageSquare, User } from "lucide-react";
 
 export default function ContactPage() {
   return (
     <main className="min-h-screen">
       <Navbar />
-      <SubHero 
-        title="Contact Us" 
-        subtitle="We're here to guide your strategic journey. Reach out for enrollments, partnerships, or support." 
+
+      <SubHero
+        title="Get in touch"
+        subtitle="Have questions or want to start your journey with us? Fill the form and our team will connect with you."
       />
-      
-      <div className="bg-black py-24 px-6">
+
+      <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20">
-          {/* Contact Details */}
+
+          {/* Contact Info */}
           <div className="lg:w-1/3 space-y-12">
             <div>
-              <h2 className="text-4xl font-black italic uppercase mb-8">Get In <span className="text-primary">Touch</span></h2>
-              <p className="text-gray-400 text-lg leading-relaxed">
-                Have a question about our classes or trial sessions? Drop us a message or 
-                visit our academy office in Jalna.
+              <h2 className="text-4xl md:text-5xl font-black mb-8 italic uppercase tracking-tighter">
+                Reach <span className="text-primary italic">Out</span>
+              </h2>
+              <p className="text-gray-400 text-lg leading-relaxed font-medium capitalize">
+                Whether you're a potential student, partner, or coach, we're here to help you make your next move.
               </p>
             </div>
 
@@ -31,15 +34,23 @@ export default function ContactPage() {
               {[
                 { icon: Phone, label: "Call Us", text: "+91 76208 57664" },
                 { icon: Mail, label: "Email Support", text: "support@gloriouschessacademy.com" },
-                { icon: MapPin, label: "Our Office", text: "Ambad Rd, behind Sai Kirti hotel, Prayag Nagar, Old Jalna, Jalna, 431203" }
+                {
+                  icon: MapPin,
+                  label: "Our Office",
+                  text: "Ambad Rd, behind Sai Kirti hotel, Prayag Nagar, Old Jalna, Jalna, 431203"
+                }
               ].map((item, idx) => (
                 <div key={idx} className="flex gap-6 group items-start">
                   <div className="w-16 h-16 shrink-0 rounded-2xl bg-white/5 flex items-center justify-center text-primary border border-white/10 group-hover:bg-primary group-hover:bg-opacity-20 group-hover:border-primary/40 group-hover:text-white transition-all">
                     <item.icon size={24} />
                   </div>
                   <div>
-                    <span className="block text-sm font-bold uppercase tracking-widest text-gray-500 mb-1">{item.label}</span>
-                    <span className="text-xl font-bold text-gray-200">{item.text}</span>
+                    <span className="block text-sm font-bold uppercase tracking-widest text-gray-500 mb-1">
+                      {item.label}
+                    </span>
+                    <span className="text-xl font-bold text-gray-200">
+                      {item.text}
+                    </span>
                   </div>
                 </div>
               ))}
@@ -50,35 +61,54 @@ export default function ContactPage() {
           <div className="lg:w-2/3">
             <div className="glass p-10 md:p-12 rounded-[3.5rem] border-primary/20">
               <form className="space-y-8">
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
                   <div className="space-y-3">
-                    <label className="text-sm font-bold uppercase tracking-widest text-gray-500 ml-2">Full Name</label>
+                    <label className="text-sm font-bold uppercase tracking-widest text-gray-500 ml-2">
+                      Full Name
+                    </label>
                     <div className="relative group">
-                      <User className="absolute left-4 top-1/2 -translate-y-1/2 text-primary opacity-50 group-focus-within:opacity-100 transition-opacity" size={16} />
-                      <input 
-                        type="text" 
-                        placeholder="Jane Doe"
+                      <User
+                        className="absolute left-4 top-1/2 -translate-y-1/2 text-primary opacity-50 group-focus-within:opacity-100 transition-opacity"
+                        size={16}
+                      />
+                      <input
+                        type="text"
+                        placeholder="Full Name"
                         className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 pl-12 focus:border-primary outline-none transition-all"
                       />
                     </div>
                   </div>
+
                   <div className="space-y-3">
-                    <label className="text-sm font-bold uppercase tracking-widest text-gray-500 ml-2">Email Address</label>
+                    <label className="text-sm font-bold uppercase tracking-widest text-gray-500 ml-2">
+                      Email Address
+                    </label>
                     <div className="relative group">
-                      <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-primary opacity-50 group-focus-within:opacity-100 transition-opacity" size={16} />
-                      <input 
-                        type="email" 
-                        placeholder="jane@example.com"
+                      <Mail
+                        className="absolute left-4 top-1/2 -translate-y-1/2 text-primary opacity-50 group-focus-within:opacity-100 transition-opacity"
+                        size={16}
+                      />
+                      <input
+                        type="email"
+                        placeholder="email address"
                         className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 pl-12 focus:border-primary outline-none transition-all"
                       />
                     </div>
                   </div>
+
                 </div>
 
                 <div className="space-y-3">
-                  <label className="text-sm font-bold uppercase tracking-widest text-gray-500 ml-2">Subject</label>
+                  <label className="text-sm font-bold uppercase tracking-widest text-gray-500 ml-2">
+                    Subject
+                  </label>
                   <div className="relative group">
-                    <MessageSquare className="absolute left-4 top-1/2 -translate-y-1/2 text-primary opacity-50 group-focus-within:opacity-100 transition-opacity" size={16} />
+                    <MessageSquare
+                      className="absolute left-4 top-1/2 -translate-y-1/2 text-primary opacity-50 group-focus-within:opacity-100 transition-opacity"
+                      size={16}
+                    />
                     <select className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 pl-12 focus:border-primary outline-none transition-all appearance-none">
                       <option className="text-black">General Inquiry</option>
                       <option className="text-black">Enrollment Question</option>
@@ -89,8 +119,10 @@ export default function ContactPage() {
                 </div>
 
                 <div className="space-y-3">
-                  <label className="text-sm font-bold uppercase tracking-widest text-gray-500 ml-2">Your Message</label>
-                  <textarea 
+                  <label className="text-sm font-bold uppercase tracking-widest text-gray-500 ml-2">
+                    Your Message
+                  </label>
+                  <textarea
                     rows={5}
                     placeholder="Tell us more about your child's chess journey..."
                     className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 focus:border-primary outline-none transition-all resize-none"
@@ -101,13 +133,15 @@ export default function ContactPage() {
                   <MessageSquare size={20} />
                   Send Message
                 </button>
+
               </form>
             </div>
           </div>
+
         </div>
-      </div>
+      </section>
+
       <Footer />
     </main>
   );
 }
-

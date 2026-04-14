@@ -3,37 +3,46 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Users, User, PlayCircle, Star } from "lucide-react";
+import Link from "next/link";
 
 const courses = [
   {
     icon: PlayCircle,
-    title: "The Trial Chess Class",
-    highlight: "FREE Session",
-    description: "A comprehensive evaluation session designed to establish learning objectives and identify your child's unique learning style and aptitude.",
-    tags: ["Evaluation", "No Commitment"],
+    title: "Beginner Chess Program",
+    highlight: "Fundamentals",
+    description: "Chess basics, rules, piece movement, and foundational principles for absolute beginners.",
+    tags: ["Basics", "Rules", "Movement"],
     color: "bg-blue-600",
   },
   {
     icon: Users,
-    title: "The Group Chess Class",
-    highlight: "Collaborative",
-    description: "Interactive live sessions that build self-confidence through positive interdependence and individual accountability among peers.",
-    tags: ["Levels: Beginner, Intermediate, Pro"],
+    title: "Intermediate Training",
+    highlight: "Strategic",
+    description: "Openings, tactics, and positional play to build a solid strategic foundation for growing players.",
+    tags: ["Tactics", "Positional", "Openings"],
     color: "bg-emerald-600",
   },
   {
     icon: User,
-    title: "The Private Chess Class",
-    highlight: "Personalized",
-    description: "One-on-one professional coaching with advanced conceptual instruction and personalized practice assignments for elite growth.",
-    tags: ["Grandmaster Path", "Intensive"],
+    title: "Advanced Coaching",
+    highlight: "Competitive",
+    description: "Tournament preparation and competitive strategies for players aiming for FIDE ratings.",
+    tags: ["FIDE Path", "Tournament Prep"],
     color: "bg-primary",
+  },
+  {
+    icon: Star,
+    title: "Kids Special Program",
+    highlight: "Junior",
+    description: "Engaging, fun-filled coaching designed specifically to build curiosity and basics in young minds.",
+    tags: ["Kids", "Fun", "Foundations"],
+    color: "bg-amber-500",
   },
 ];
 
 export default function CoursesSection() {
   return (
-    <section id="services" className="py-24 px-6 bg-[#0f0f0f]">
+    <section id="courses" className="py-24 px-6 bg-[#0f0f0f]">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 px-4">
           <div className="max-w-2xl">
@@ -53,7 +62,7 @@ export default function CoursesSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {courses.map((course, idx) => (
             <motion.div
               key={idx}
@@ -63,7 +72,7 @@ export default function CoursesSection() {
               viewport={{ once: true }}
               className="group relative bg-[#121212] overflow-hidden rounded-[2.5rem] border border-white/5 p-1 transition-all hover:border-primary/40 shadow-2xl"
             >
-              <div className="h-full p-8 md:p-10 rounded-[2.3rem] bg-gradient-to-b from-white/5 to-transparent">
+              <div className="h-full p-8 md:p-10 rounded-[2.3rem] bg-gradient-to-b from-white/5 to-transparent flex flex-col justify-between">
                 <div className={`w-16 h-16 rounded-2xl ${course.color} flex items-center justify-center text-white mb-8 shadow-2xl transform group-hover:scale-110 transition-transform`}>
                   <course.icon size={32} />
                 </div>
@@ -98,6 +107,15 @@ export default function CoursesSection() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-16 text-center">
+          <Link 
+            href="/courses" 
+            className="inline-flex items-center gap-3 bg-white/5 border border-white/10 px-12 py-5 rounded-full font-black text-lg hover:bg-primary hover:text-white transition-all transform hover:scale-105 uppercase tracking-widest"
+          >
+           Explore All Courses
+          </Link>
         </div>
       </div>
     </section>

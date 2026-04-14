@@ -41,16 +41,22 @@ export default function Footer() {
 
         {/* Quick Links */}
         <div>
-          <h4 className="text-lg font-bold mb-8">Quick Links</h4>
+          <h4 className="text-lg font-bold mb-8 uppercase tracking-widest italic text-primary">Explore</h4>
           <ul className="space-y-4">
-            {["Home", "Services", "Achievements", "News", "FAQ's"].map((link) => (
-              <li key={link}>
+            {[
+              { name: "Home", href: "/" },
+              { name: "Student", href: "/students" },
+              { name: "Partner", href: "/partners" },
+              { name: "Courses", href: "/courses" },
+              { name: "Tournaments", href: "/tournaments" },
+            ].map((link) => (
+              <li key={link.name}>
                 <Link
-                  href={`#${link.toLowerCase()}`}
+                  href={link.href}
                   className="text-gray-500 hover:text-primary transition-colors flex items-center gap-2 group"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-all" />
-                  {link}
+                  {link.name}
                 </Link>
               </li>
             ))}

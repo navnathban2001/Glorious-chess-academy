@@ -9,12 +9,12 @@ import { usePathname } from "next/navigation";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "Services", href: "/services" },
-  { name: "FAQ's", href: "/faq" },
-  { name: "Achievements", href: "/achievements" },
-  { name: "Coach Hiring", href: "/hiring" },
-  { name: "News", href: "/news" },
-  { name: "Contact Us", href: "/contact" },
+  { name: "About Us", href: "/about" },
+  { name: "Student", href: "/students" },
+  { name: "Partner", href: "/partners" },
+  { name: "Courses", href: "/courses" },
+  { name: "Tournaments", href: "/tournaments" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -38,8 +38,8 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-3 group">
-          <div className="relative w-12 h-12">
+        <Link href="/" className="flex items-center space-x-4 group">
+          <div className="relative w-16 h-16">
             <Image
               src="/logo.png"
               alt="Glorious Chess Academy Logo"
@@ -47,8 +47,9 @@ export default function Navbar() {
               className="object-contain"
             />
           </div>
-          <span className="text-xl font-bold tracking-tight uppercase">
-            GLORIOUS CHESS <span className="text-primary italic">ACADEMY</span>
+          <span className="text-2xl font-black tracking-tight uppercase leading-none">
+            GLORIOUS CHESS <br />
+            <span className="text-primary italic">ACADEMY</span>
           </span>
         </Link>
 

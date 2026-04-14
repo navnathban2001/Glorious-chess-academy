@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     icon: "/logo.png", // favicon
   },
 };
+import WhatsAppButton from "@/components/whatsapp-button";
+import SplashScreen from "@/components/splash-screen";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -29,7 +32,11 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <SplashScreen />
+        {children}
+        <WhatsAppButton />
+      </body>
     </html>
   );
 }
