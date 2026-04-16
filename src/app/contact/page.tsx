@@ -60,7 +60,8 @@ export default function ContactPage() {
                 {
                   icon: MapPin,
                   label: "Our Office",
-                  text: "Ambad Rd, behind Sai Kirti hotel, Prayag Nagar, Kanchan Nagar, Old Jalna, Jalna, Maharashtra 431203"
+                  text: "Ambad Rd, behind Sai Kirti hotel, Prayag Nagar, Kanchan Nagar, Old Jalna, Jalna, Maharashtra 431203",
+                  link: "https://maps.google.com/maps?q=Ambad+Rd,+behind+Sai+Kirti+hotel,+Prayag+Nagar,+Kanchan+Nagar,+Old+Jalna,+Jalna,+Maharashtra+431203"
                 }
               ].map((item, idx) => (
                 <div key={idx} className="flex gap-6 group items-start">
@@ -71,9 +72,19 @@ export default function ContactPage() {
                     <span className="block text-sm font-bold uppercase tracking-widest text-gray-500 mb-1">
                       {item.label}
                     </span>
-                    <span className="text-xl font-bold text-gray-200">
+                    <span className="text-xl font-bold text-gray-200 block">
                       {item.text}
                     </span>
+                    {item.link && (
+                      <a 
+                        href={item.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="mt-4 inline-flex px-6 py-2 bg-white/5 border border-white/10 hover:border-primary/40 hover:bg-primary/10 text-primary font-bold text-sm uppercase tracking-widest rounded-full transition-all items-center gap-2"
+                      >
+                        <MapPin size={16} /> View on Map
+                      </a>
+                    )}
                   </div>
                 </div>
               ))}
@@ -161,27 +172,6 @@ export default function ContactPage() {
             </div>
           </div>
 
-        </div>
-      </section>
-
-      {/* Map Section */}
-      <section className="pb-24 px-6 relative z-10">
-        <div className="max-w-7xl mx-auto">
-          <div className="glass p-4 rounded-[2rem] md:rounded-[3rem] border border-white/5 shadow-2xl shadow-primary/5 bg-gradient-to-br from-white/5 to-black/50">
-            <div className="w-full h-[400px] md:h-[500px] rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden relative">
-              {/* Optional dark mode overlay map styling helper if we want deeply blended look, but grayscale is cleaner */}
-              <iframe 
-                src="https://maps.google.com/maps?q=Ambad+Rd,+behind+Sai+Kirti+hotel,+Prayag+Nagar,+Kanchan+Nagar,+Old+Jalna,+Jalna,+Maharashtra+431203&t=&z=14&ie=UTF8&iwloc=&output=embed" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0, filter: "grayscale(80%) invert(90%) hue-rotate(180deg) contrast(1.2)" }} 
-                allowFullScreen={false} 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-                className="absolute inset-0"
-              />
-            </div>
-          </div>
         </div>
       </section>
 
