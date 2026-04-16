@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Glorious Chess Academy | Professional Online Chess Training",
-  description: "Nurturing excellence through precision and strategic discipline. Join the elite circle of chess players with FIDE rated coaches. Online lessons for all skill levels.",
+  title: "Best Online Chess Academy in India | Glorious Chess Academy",
+  description: "Learn chess from expert coaches with structured programs, tournaments, and certification. Join Glorious Chess Academy – leading in Marathwada and expanding across India.",
   icons: {
     icon: "/logo.png", // favicon
   },
