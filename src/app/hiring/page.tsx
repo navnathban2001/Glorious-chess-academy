@@ -3,18 +3,42 @@
 import React from "react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import SubHero from "@/components/subhero";
-import { Send, User, Mail, Briefcase, FileText, MapPin, Phone, Globe, Home } from "lucide-react";
+import { Send, User, Mail, Briefcase, FileText, MapPin, Phone, Globe, Home, Users } from "lucide-react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function HiringPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-black text-white selection:bg-primary/30">
       <Navbar />
-      <SubHero 
-        title="Coach Hiring" 
-        subtitle="Ignite passion for kids in the world of Chess and support him/her through the transition with passion and integrity." 
-      />
+
+      {/* Hero Section */}
+      <section className="relative pt-40 pb-20 px-6 overflow-hidden">
+        {/* Background Decor */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[800px] bg-gradient-to-b from-primary/10 via-transparent to-transparent -z-10 blur-[120px] opacity-50" />
+        
+        <div className="max-w-7xl mx-auto text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-8"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-black uppercase tracking-[0.2em] shadow-[0_0_15px_rgba(184,134,11,0.2)]">
+              <Users size={16} className="fill-current" /> Join Our Faculty
+            </div>
+            
+            <h1 className="text-5xl md:text-8xl font-black italic uppercase tracking-tighter leading-[0.9] max-w-5xl mx-auto">
+              Coach <br />
+              <span className="text-primary italic underline decoration-primary/20 underline-offset-8">Hiring</span>
+            </h1>
+            
+            <p className="text-gray-400 text-xl md:text-2xl max-w-3xl mx-auto font-medium leading-relaxed">
+              Ignite passion for kids in the world of Chess and support them through the transition with passion and integrity.
+            </p>
+          </motion.div>
+        </div>
+      </section>
       
       <div className="bg-black py-24 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16">

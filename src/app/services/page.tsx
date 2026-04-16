@@ -1,23 +1,49 @@
+"use client";
+
 import React from "react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import SubHero from "@/components/subhero";
 import CoursesSection from "@/components/coursessection";
-import { CheckCircle2, TrendingUp, Trophy } from "lucide-react";
+import { CheckCircle2, TrendingUp, Trophy, Compass } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function ServicesPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-black text-white selection:bg-primary/30">
       <Navbar />
-      <SubHero 
-        title="Our Services" 
-        subtitle="Professional chess training programs designed for every stage of your strategic journey." 
-      />
       
-      <div className="bg-black py-20 px-6">
+      {/* Hero Section */}
+      <section className="relative pt-40 pb-20 px-6 overflow-hidden">
+        {/* Background Decor */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[800px] bg-gradient-to-b from-primary/10 via-transparent to-transparent -z-10 blur-[120px] opacity-50" />
+        
+        <div className="max-w-7xl mx-auto text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-8"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-black uppercase tracking-[0.2em] shadow-[0_0_15px_rgba(184,134,11,0.2)]">
+              <Compass size={16} className="fill-current" /> Empower Your Mind
+            </div>
+            
+            <h1 className="text-5xl md:text-8xl font-black italic uppercase tracking-tighter leading-[0.9] max-w-5xl mx-auto">
+              Our <br />
+              <span className="text-primary italic underline decoration-primary/20 underline-offset-8">Services</span>
+            </h1>
+            
+            <p className="text-gray-400 text-xl md:text-2xl max-w-3xl mx-auto font-medium leading-relaxed">
+              Professional chess training programs designed for every stage of your strategic journey.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+      
+      <div className="bg-[#080808] py-20 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-4xl font-bold mb-8 italic uppercase tracking-tight">
+            <h2 className="text-4xl md:text-5xl font-black mb-8 italic uppercase tracking-tighter">
               Why Choose Our <span className="text-primary">Programs?</span>
             </h2>
             <div className="space-y-6">

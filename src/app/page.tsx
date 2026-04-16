@@ -2,6 +2,7 @@
 
 import { Trophy, Users, Star, Rocket, Send } from "lucide-react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 // ✅ Components Imports
 import Navbar from "@/components/navbar";
@@ -45,54 +46,64 @@ export default function Home() {
       <CoursesSection />
 
       {/* Partner Section */}
-      <section className="py-24 bg-[#080808] px-6 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[150px] -mr-64 -mt-64" />
-        <div className="max-w-7xl mx-auto glass p-12 md:p-20 rounded-[4rem] border-primary/20 relative z-10">
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-3 text-primary font-bold uppercase tracking-[0.2em] mb-8">
-              <Rocket size={20} />
-              Partner Opportunity
+      <section className="py-32 bg-[#080808] px-6 relative overflow-hidden">
+        {/* Background Decor */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-b from-primary/5 via-transparent to-transparent -z-10 blur-[120px] opacity-30" />
+        
+        <div className="max-w-7xl mx-auto relative z-10 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="glass p-12 md:p-24 rounded-[4rem] border-primary/20 space-y-10"
+          >
+            <div className="inline-flex items-center justify-center gap-3 text-primary font-black uppercase tracking-[0.2em] bg-primary/10 px-6 py-2 rounded-full text-xs">
+              <Rocket size={16} /> Partner Opportunity
             </div>
 
-            <h2 className="text-4xl md:text-7xl font-black mb-10 leading-tight uppercase italic tracking-tighter">
-              Start Your Chess <br />
-              <span className="text-primary">
-                Academy With Us 
-              </span>
+            <h2 className="text-4xl md:text-8xl font-black leading-[0.9] uppercase italic tracking-tighter max-w-4xl mx-auto">
+              Start Your <br />
+              <span className="text-primary italic underline decoration-primary/20 underline-offset-8">Chess Academy</span> <br />
+              With Us 
             </h2>
 
-            <p className="text-xl text-gray-400 mb-12 leading-relaxed">
-              Build your own chess academy with Access to FIDE-rated coaching network, 
+            <p className="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto font-medium leading-relaxed">
+              Build your own chess academy with access to FIDE-rated coaching network, 
               ready-to-use platforms, student lead support, and full marketing assistance.
             </p>
 
-            <Link
-              href="/partners"
-              className="inline-flex items-center gap-4 bg-primary text-white px-12 py-5 rounded-full font-black text-lg hover:scale-105 transition-all shadow-2xl shadow-primary/30 uppercase tracking-widest"
-            >
-              Become a Partner
-            </Link>
-          </div>
+            <div className="pt-4">
+              <Link
+                href="/partners"
+                className="inline-flex items-center gap-4 bg-primary text-black px-12 py-6 rounded-full font-black text-xl hover:scale-105 transition-all shadow-2xl shadow-primary/40 uppercase tracking-widest"
+              >
+                Become a Partner
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Lead Section */}
-      <section className="py-24 bg-black px-6">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 items-center">
+      <section className="py-32 bg-black px-6 overflow-hidden">
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-20 space-y-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl md:text-8xl font-black leading-[0.9] italic uppercase tracking-tighter">
+                Book Your <br />
+                <span className="text-primary italic underline decoration-primary/20 underline-offset-8">Free Demo Class</span>
+              </h2>
+            </motion.div>
 
-          <div className="lg:w-1/2">
-            <h2 className="text-5xl md:text-7xl font-black mb-8 leading-tight italic uppercase tracking-tighter">
-              Book Your <br />
-              <span className="text-primary">
-                Free Demo Class
-              </span>
-            </h2>
-
-            <p className="text-xl text-gray-400 mb-10 leading-relaxed font-medium capitalize">
+            <p className="text-gray-400 text-xl md:text-2xl max-w-2xl mx-auto font-medium leading-relaxed">
               Learn directly from a FIDE-rated coach and experience our world-class training standards firsthand.
             </p>
 
-            <div className="flex items-center gap-6 text-gray-500 font-bold">
+            <div className="flex items-center justify-center gap-6 text-gray-500 font-bold">
               <div className="flex -space-x-4">
                 {[1, 2, 3, 4].map((i) => (
                   <div
@@ -101,59 +112,65 @@ export default function Home() {
                   />
                 ))}
               </div>
-              <span>Join 500+ students this month</span>
+              <span className="text-sm">Join 500+ students this month</span>
             </div>
           </div>
 
-          <div className="lg:w-1/2 w-full">
-            <div className="glass p-10 md:p-12 rounded-[3.5rem] border-white/5 bg-gradient-to-br from-white/5 to-transparent">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="glass p-10 md:p-16 rounded-[4rem] border-white/10 bg-gradient-to-br from-white/5 to-transparent relative overflow-hidden"
+            >
+              {/* Decorative background element */}
+              <div className="absolute -top-20 -right-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
 
-              <form className="space-y-6">
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-                  <div className="space-y-2">
-                    <label className="text-[10px] font-black uppercase tracking-widest text-gray-500 ml-4">
+              <form className="space-y-8 relative z-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="space-y-3 text-left">
+                    <label className="text-xs font-black uppercase tracking-widest text-primary ml-4 opacity-80">
                       Full Name
                     </label>
                     <input
-                      className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 focus:border-primary outline-none transition-all"
-                      placeholder="Enter your name"
+                      className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 focus:border-primary outline-none transition-all placeholder:text-gray-600 font-medium"
+                      placeholder="e.g. Satish Thakur"
                     />
                   </div>
 
-                  <div className="space-y-2">
-                    <label className="text-[10px] font-black uppercase tracking-widest text-gray-500 ml-4">
+                  <div className="space-y-3 text-left">
+                    <label className="text-xs font-black uppercase tracking-widest text-primary ml-4 opacity-80">
                       Mobile Number
                     </label>
                     <input
-                      className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 focus:border-primary outline-none transition-all"
-                      placeholder="Contact number"
+                      className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 focus:border-primary outline-none transition-all placeholder:text-gray-600 font-medium"
+                      placeholder="+91 XXXXX XXXXX"
                     />
                   </div>
-
                 </div>
 
-                <div className="space-y-2">
-                  <label className="text-[10px] font-black uppercase tracking-widest text-gray-500 ml-4">
+                <div className="space-y-3 text-left">
+                  <label className="text-xs font-black uppercase tracking-widest text-primary ml-4 opacity-80">
                     Child's Age (If applicable)
                   </label>
                   <input
-                    className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 focus:border-primary outline-none transition-all"
-                    placeholder="Age"
+                    className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 focus:border-primary outline-none transition-all placeholder:text-gray-600 font-medium"
+                    placeholder="e.g. 8 years"
                   />
                 </div>
 
-                <button className="w-full bg-primary text-white font-black py-6 rounded-2xl uppercase tracking-[0.2em] flex items-center justify-center gap-3 hover:scale-[1.02] transition-all shadow-xl shadow-primary/20">
-                  <Send size={18} />
-                   Book Free Demo
-                </button>
-
+                <div className="pt-4">
+                  <button className="w-full bg-primary text-black font-black py-6 rounded-2xl uppercase tracking-[0.2em] flex items-center justify-center gap-3 hover:scale-[1.02] transition-all shadow-2xl shadow-primary/20 text-lg">
+                    <Send size={20} />
+                     Book Free Demo
+                  </button>
+                  <p className="text-center mt-6 text-xs font-black uppercase tracking-[0.2em] text-gray-500">
+                    Limited Demo Slots Available This Week
+                  </p>
+                </div>
               </form>
-
-            </div>
+            </motion.div>
           </div>
-
         </div>
       </section>
 

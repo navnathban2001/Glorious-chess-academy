@@ -3,18 +3,41 @@
 import React from "react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import SubHero from "@/components/subhero";
-import { Mail, Phone, MapPin, MessageSquare, User } from "lucide-react";
+import { Mail, Phone, MapPin, MessageSquare, User, Star } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-black text-white selection:bg-primary/30">
       <Navbar />
 
-      <SubHero
-        title="Get in touch"
-        subtitle="Have questions or want to start your journey with us? Fill the form and our team will connect with you."
-      />
+      {/* Hero Section */}
+      <section className="relative pt-40 pb-20 px-6 overflow-hidden">
+        {/* Background Decor */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[800px] bg-gradient-to-b from-primary/10 via-transparent to-transparent -z-10 blur-[120px] opacity-50" />
+        
+        <div className="max-w-7xl mx-auto text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-8"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-black uppercase tracking-[0.2em] shadow-[0_0_15px_rgba(184,134,11,0.2)]">
+              <Star size={16} className="fill-current" /> Connect With Us
+            </div>
+            
+            <h1 className="text-5xl md:text-8xl font-black italic uppercase tracking-tighter leading-[0.9] max-w-5xl mx-auto">
+              Get In <br />
+              <span className="text-primary italic underline decoration-primary/20 underline-offset-8">Touch</span>
+            </h1>
+            
+            <p className="text-gray-400 text-xl md:text-2xl max-w-3xl mx-auto font-medium leading-relaxed">
+              Have questions or want to start your journey with us? Fill the form and our team will connect with you.
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20">
@@ -37,7 +60,7 @@ export default function ContactPage() {
                 {
                   icon: MapPin,
                   label: "Our Office",
-                  text: "Ambad Rd, behind Sai Kirti hotel, Prayag Nagar, Old Jalna, Jalna, 431203"
+                  text: "Ambad Rd, behind Sai Kirti hotel, Prayag Nagar, Kanchan Nagar, Old Jalna, Jalna, Maharashtra 431203"
                 }
               ].map((item, idx) => (
                 <div key={idx} className="flex gap-6 group items-start">
@@ -138,6 +161,27 @@ export default function ContactPage() {
             </div>
           </div>
 
+        </div>
+      </section>
+
+      {/* Map Section */}
+      <section className="pb-24 px-6 relative z-10">
+        <div className="max-w-7xl mx-auto">
+          <div className="glass p-4 rounded-[2rem] md:rounded-[3rem] border border-white/5 shadow-2xl shadow-primary/5 bg-gradient-to-br from-white/5 to-black/50">
+            <div className="w-full h-[400px] md:h-[500px] rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden relative">
+              {/* Optional dark mode overlay map styling helper if we want deeply blended look, but grayscale is cleaner */}
+              <iframe 
+                src="https://maps.google.com/maps?q=Ambad+Rd,+behind+Sai+Kirti+hotel,+Prayag+Nagar,+Kanchan+Nagar,+Old+Jalna,+Jalna,+Maharashtra+431203&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0, filter: "grayscale(80%) invert(90%) hue-rotate(180deg) contrast(1.2)" }} 
+                allowFullScreen={false} 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                className="absolute inset-0"
+              />
+            </div>
+          </div>
         </div>
       </section>
 

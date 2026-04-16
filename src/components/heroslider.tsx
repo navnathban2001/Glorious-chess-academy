@@ -34,7 +34,7 @@ export default function HeroSlider() {
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="max-w-5xl"
+          className="max-w-5xl pt-40"
         >
           <h1 className="text-5xl md:text-8xl font-black mb-8 tracking-tighter leading-none uppercase italic">
             {slides[0].title.split(" ").map((word, i) => (
