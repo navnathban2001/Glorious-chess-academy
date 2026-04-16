@@ -44,52 +44,63 @@ export default function ContactPage() {
 
           {/* Contact Info */}
           <div className="lg:w-1/3 space-y-12">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-black mb-8 italic uppercase tracking-tighter">
-                Reach <span className="text-primary italic">Out</span>
-              </h2>
-              <p className="text-gray-400 text-lg leading-relaxed font-medium capitalize">
-                Whether you're a potential student, partner, or coach, we're here to help you make your next move.
-              </p>
-            </div>
+  <div>
+    <h2 className="text-4xl md:text-5xl font-black mb-8 italic uppercase tracking-tighter">
+      Reach <span className="text-primary italic">Out</span>
+    </h2>
+    <p className="text-gray-400 text-lg leading-relaxed font-medium capitalize">
+      Whether you're a potential student, partner, or coach, we're here to help you make your next move.
+    </p>
+  </div>
 
-            <div className="space-y-8">
-              {[
-                { icon: Phone, label: "Call Us", text: "+91 76208 57664" },
-                { icon: Mail, label: "Email Support", text: "support@gloriouschessacademy.com" },
-                {
-                  icon: MapPin,
-                  label: "Our Office",
-                  text: "Ambad Rd, behind Sai Kirti hotel, Prayag Nagar, Kanchan Nagar, Old Jalna, Jalna, Maharashtra 431203",
-                  link: "https://maps.google.com/maps?q=Ambad+Rd,+behind+Sai+Kirti+hotel,+Prayag+Nagar,+Kanchan+Nagar,+Old+Jalna,+Jalna,+Maharashtra+431203"
-                }
-              ].map((item, idx) => (
-                <div key={idx} className="flex gap-6 group items-start">
-                  <div className="w-16 h-16 shrink-0 rounded-2xl bg-white/5 flex items-center justify-center text-primary border border-white/10 group-hover:bg-primary group-hover:bg-opacity-20 group-hover:border-primary/40 group-hover:text-white transition-all">
-                    <item.icon size={24} />
-                  </div>
-                  <div className="flex flex-col items-end">
-                    <span className="block text-sm font-bold uppercase tracking-widest text-gray-500 mb-1">
-                      {item.label}
-                    </span>
-                    <span className="text-xl font-bold text-gray-200 block">
-                      {item.text}
-                    </span>
-                    {item.link && (
-                      <a 
-                        href={item.link}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="mt-4 inline-flex px-6 py-2 bg-white/5 border border-white/10 hover:border-primary/40 hover:bg-primary/10 text-primary font-bold text-sm uppercase tracking-widest rounded-full transition-all items-center gap-2"
-                      >
-                        <MapPin size={16} /> View on Map
-                      </a>
-                    )}
-                  </div>
-                </div>
-              ))}
+  <div className="flex flex-col gap-4">
+    {[
+      { icon: Phone, label: "Call Us", text: "+91 76208 57664" },
+      { icon: Mail, label: "Email Support", text: "support@gloriouschessacademy.com" },
+      {
+        icon: MapPin,
+        label: "Our Office",
+        text: "Ambad Rd, behind Sai Kirti hotel, Prayag Nagar, Kanchan Nagar, Old Jalna, Jalna, Maharashtra 431203",
+        link: "https://maps.google.com/maps?q=Ambad+Rd,+behind+Sai+Kirti+hotel,+Prayag+Nagar,+Kanchan+Nagar,+Old+Jalna,+Jalna,+Maharashtra+431203"
+      }
+    ].map((item, idx) => (
+      <div key={idx} className="flex items-start gap-8">
+
+        {/* ICON */}
+        <div className="w-16 h-16 shrink-0 rounded-2xl bg-white/5 flex items-center justify-center text-primary border border-white/10">
+          <item.icon size={22} />
+        </div>
+
+        {/* TEXT */}
+        <div className="flex flex-col w-full text-left">
+
+          <span className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-1">
+            {item.label}
+          </span>
+
+          <span className="text-lg font-bold text-gray-200 leading-snug">
+            {item.text}
+          </span>
+
+          {/* BUTTON RIGHT */}
+          {item.link && (
+            <div className="w-full flex justify-end mt-3">
+              <a 
+                href={item.link}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex px-5 py-2 bg-white/5 border border-white/10 hover:border-primary/40 hover:bg-primary/10 text-primary font-bold text-xs uppercase tracking-widest rounded-full transition-all items-center gap-2"
+              >
+                <MapPin size={14} /> View on Map
+              </a>
             </div>
-          </div>
+          )}
+
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
 
           {/* Contact Form */}
           <div className="lg:w-2/3">
@@ -170,6 +181,7 @@ export default function ContactPage() {
 
               </form>
             </div>
+            
           </div>
 
         </div>
