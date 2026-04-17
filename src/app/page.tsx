@@ -3,6 +3,7 @@
 import { Trophy, Users, Star, Rocket, Send } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 // ✅ Components Imports
 import Navbar from "@/components/navbar";
@@ -12,8 +13,50 @@ import FAQSection from "@/components/faqsection";
 import Footer from "@/components/footer";
 
 export default function Home() {
+  const [formData, setFormData] = useState({ name: "", mobile: "", age: "" });
+  const [errors, setErrors] = useState({ name: "", mobile: "" });
+
+  const validateName = (name: string) => {
+    if (!name) return "Name is required.";
+    if (!/^[A-Za-z\s]+$/.test(name.trim())) return "Only letters and spaces are allowed.";
+    return "";
+  };
+
+  const validateMobile = (mobile: string) => {
+    if (!mobile) return "Mobile number is required.";
+    if (!/^\d{10}$/.test(mobile)) return "Mobile number must be exactly 10 digits.";
+    return "";
+  };
+
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setFormData({ ...formData, name: value });
+    if (errors.name) setErrors({ ...errors, name: validateName(value) });
+  };
+
+  const handleMobileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value.replace(/\D/g, "");
+    setFormData({ ...formData, mobile: value });
+    if (errors.mobile) setErrors({ ...errors, mobile: validateMobile(value) });
+  };
+
+  const handleDemoSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const nameError = validateName(formData.name);
+    const mobileError = validateMobile(formData.mobile);
+
+    if (nameError || mobileError) {
+      setErrors({ name: nameError, mobile: mobileError });
+      return;
+    }
+    
+    alert("Free Demo booked successfully! Our team will contact you soon.");
+    setFormData({ name: "", mobile: "", age: "" });
+    setErrors({ name: "", mobile: "" });
+  };
+
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen overflow-x-hidden">
 
       <Navbar />
       <HeroSlider />
@@ -126,26 +169,37 @@ export default function Home() {
               {/* Decorative background element */}
               <div className="absolute -top-20 -right-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
 
-              <form className="space-y-8 relative z-10">
+              <form className="space-y-8 relative z-10" onSubmit={handleDemoSubmit} noValidate>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="space-y-3 text-left">
                     <label className="text-xs font-black uppercase tracking-widest text-primary ml-4 opacity-80">
-                      Full Name
+                      Full Name *
                     </label>
                     <input
-                      className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 focus:border-primary outline-none transition-all placeholder:text-gray-600 font-medium"
+                      type="text"
+                      value={formData.name}
+                      onChange={handleNameChange}
+                      onBlur={(e) => setErrors({ ...errors, name: validateName(e.target.value) })}
+                      className={`w-full bg-white/5 border ${errors.name ? 'border-red-500' : 'border-white/10'} rounded-2xl p-5 focus:border-primary outline-none transition-all placeholder:text-gray-600 font-medium`}
                       placeholder="e.g. Full Name"
                     />
+                    {errors.name && <p className="text-red-500 text-xs font-bold px-4">{errors.name}</p>}
                   </div>
 
                   <div className="space-y-3 text-left">
                     <label className="text-xs font-black uppercase tracking-widest text-primary ml-4 opacity-80">
-                      Mobile Number
+                      Mobile Number *
                     </label>
                     <input
-                      className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 focus:border-primary outline-none transition-all placeholder:text-gray-600 font-medium"
-                      placeholder="+91 9887654321"
+                      type="tel"
+                      maxLength={10}
+                      value={formData.mobile}
+                      onChange={handleMobileChange}
+                      onBlur={(e) => setErrors({ ...errors, mobile: validateMobile(e.target.value) })}
+                      className={`w-full bg-white/5 border ${errors.mobile ? 'border-red-500' : 'border-white/10'} rounded-2xl p-5 focus:border-primary outline-none transition-all placeholder:text-gray-600 font-medium`}
+                      placeholder="e.g. 9887654321"
                     />
+                     {errors.mobile && <p className="text-red-500 text-xs font-bold px-4">{errors.mobile}</p>}
                   </div>
                 </div>
 
@@ -154,13 +208,18 @@ export default function Home() {
                     Child's Age (If applicable)
                   </label>
                   <input
+                    type="number"
+                    value={formData.age}
+                    onChange={(e) => setFormData({ ...formData, age: e.target.value })}
                     className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 focus:border-primary outline-none transition-all placeholder:text-gray-600 font-medium"
-                    placeholder="e.g. 8 years"
+                    placeholder="e.g. 8"
+                    min="4"
+                    max="99"
                   />
                 </div>
 
                 <div className="pt-4">
-                  <button className="w-full bg-primary text-black font-black py-6 rounded-2xl uppercase tracking-[0.2em] flex items-center justify-center gap-3 hover:scale-[1.02] transition-all shadow-2xl shadow-primary/20 text-lg">
+                  <button type="submit" className="w-full bg-primary text-black font-black py-6 rounded-2xl uppercase tracking-[0.2em] flex items-center justify-center gap-3 hover:scale-[1.02] transition-all shadow-2xl shadow-primary/20 text-lg">
                     <Send size={20} />
                      Book Free Demo
                   </button>

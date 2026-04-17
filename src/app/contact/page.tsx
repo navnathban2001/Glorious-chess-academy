@@ -1,14 +1,67 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Mail, Phone, MapPin, MessageSquare, User, Star } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({ name: "", email: "", subject: "General Inquiry", message: "" });
+  const [errors, setErrors] = useState({ name: "", email: "", message: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const validateName = (name: string) => {
+    if (!name) return "Name is required.";
+    if (!/^[A-Za-z\s]+$/.test(name.trim())) return "Only letters and spaces are allowed.";
+    return "";
+  };
+
+  const validateEmail = (email: string) => {
+    if (!email) return "Email is required.";
+    if (!email.includes("@")) return "Email must contain an '@' symbol.";
+    if (!email.includes(".")) return "Email must contain a valid domain (e.g., .com).";
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) return "Please enter a valid email address.";
+    return "";
+  };
+
+  const validateMessage = (message: string) => {
+    if (!message) return "Message is required.";
+    return "";
+  };
+
+  const handleOnChange = (field: string, value: string) => {
+    setFormData({ ...formData, [field]: value });
+    if (errors[field as keyof typeof errors]) {
+      if (field === 'name') setErrors({ ...errors, name: validateName(value) });
+      if (field === 'email') setErrors({ ...errors, email: validateEmail(value) });
+      if (field === 'message') setErrors({ ...errors, message: validateMessage(value) });
+    }
+  };
+
+  const handleContactSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const nameError = validateName(formData.name);
+    const emailError = validateEmail(formData.email);
+    const messageError = validateMessage(formData.message);
+
+    if (nameError || emailError || messageError) {
+      setErrors({ name: nameError, email: emailError, message: messageError });
+      return;
+    }
+
+    setIsSubmitting(true);
+    setTimeout(() => {
+      alert("Your message has been sent successfully!");
+      setFormData({ name: "", email: "", subject: "General Inquiry", message: "" });
+      setErrors({ name: "", email: "", message: "" });
+      setIsSubmitting(false);
+    }, 1000);
+  };
+
   return (
-    <main className="min-h-screen bg-black text-white selection:bg-primary/30">
+    <main className="min-h-screen bg-black text-white selection:bg-primary/30 overflow-x-hidden">
       <Navbar />
 
       {/* Hero Section */}
@@ -105,13 +158,13 @@ export default function ContactPage() {
           {/* Contact Form */}
           <div className="lg:w-2/3">
             <div className="glass p-10 md:p-12 rounded-[3.5rem] border-primary/20">
-              <form className="space-y-8">
+              <form className="space-y-8" onSubmit={handleContactSubmit} noValidate>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
                   <div className="space-y-3">
                     <label className="text-sm font-bold uppercase tracking-widest text-gray-500 ml-2">
-                      Full Name
+                      Full Name *
                     </label>
                     <div className="relative group">
                       <User
@@ -120,15 +173,19 @@ export default function ContactPage() {
                       />
                       <input
                         type="text"
+                        value={formData.name}
+                        onChange={(e) => handleOnChange('name', e.target.value)}
+                        onBlur={(e) => setErrors({ ...errors, name: validateName(e.target.value) })}
                         placeholder="Full Name"
-                        className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 pl-12 focus:border-primary outline-none transition-all"
+                        className={`w-full bg-white/5 border ${errors.name ? 'border-red-500' : 'border-white/10'} rounded-2xl p-5 pl-12 focus:border-primary outline-none transition-all`}
                       />
                     </div>
+                    {errors.name && <p className="text-red-500 text-xs font-bold pl-2">{errors.name}</p>}
                   </div>
 
                   <div className="space-y-3">
                     <label className="text-sm font-bold uppercase tracking-widest text-gray-500 ml-2">
-                      Email Address
+                      Email Address *
                     </label>
                     <div className="relative group">
                       <Mail
@@ -137,10 +194,14 @@ export default function ContactPage() {
                       />
                       <input
                         type="email"
+                        value={formData.email}
+                        onChange={(e) => handleOnChange('email', e.target.value)}
+                        onBlur={(e) => setErrors({ ...errors, email: validateEmail(e.target.value) })}
                         placeholder="email address"
-                        className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 pl-12 focus:border-primary outline-none transition-all"
+                        className={`w-full bg-white/5 border ${errors.email ? 'border-red-500' : 'border-white/10'} rounded-2xl p-5 pl-12 focus:border-primary outline-none transition-all`}
                       />
                     </div>
+                    {errors.email && <p className="text-red-500 text-xs font-bold pl-2">{errors.email}</p>}
                   </div>
 
                 </div>
@@ -154,29 +215,41 @@ export default function ContactPage() {
                       className="absolute left-4 top-1/2 -translate-y-1/2 text-primary opacity-50 group-focus-within:opacity-100 transition-opacity"
                       size={16}
                     />
-                    <select className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 pl-12 focus:border-primary outline-none transition-all appearance-none">
-                      <option className="text-black">General Inquiry</option>
-                      <option className="text-black">Enrollment Question</option>
-                      <option className="text-black">Technical Support</option>
-                      <option className="text-black">Partnership</option>
+                    <select 
+                      value={formData.subject}
+                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                      className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 pl-12 focus:border-primary outline-none transition-all appearance-none"
+                    >
+                      <option className="text-black" value="General Inquiry">General Inquiry</option>
+                      <option className="text-black" value="Enrollment Question">Enrollment Question</option>
+                      <option className="text-black" value="Technical Support">Technical Support</option>
+                      <option className="text-black" value="Partnership">Partnership</option>
                     </select>
                   </div>
                 </div>
 
                 <div className="space-y-3">
                   <label className="text-sm font-bold uppercase tracking-widest text-gray-500 ml-2">
-                    Your Message
+                    Your Message *
                   </label>
                   <textarea
                     rows={5}
+                    value={formData.message}
+                    onChange={(e) => handleOnChange('message', e.target.value)}
+                    onBlur={(e) => setErrors({ ...errors, message: validateMessage(e.target.value) })}
                     placeholder="Tell us more about your child's chess journey..."
-                    className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 focus:border-primary outline-none transition-all resize-none"
+                    className={`w-full bg-white/5 border ${errors.message ? 'border-red-500' : 'border-white/10'} rounded-2xl p-5 focus:border-primary outline-none transition-all resize-none`}
                   ></textarea>
+                  {errors.message && <p className="text-red-500 text-xs font-bold pl-2">{errors.message}</p>}
                 </div>
 
-                <button className="w-full bg-primary text-white font-black py-6 rounded-2xl uppercase tracking-widest flex items-center justify-center gap-3 hover:scale-[1.01] transition-all shadow-2xl shadow-primary/20">
+                <button 
+                  type="submit" 
+                  disabled={isSubmitting}
+                  className="w-full bg-primary text-white font-black py-6 rounded-2xl uppercase tracking-widest flex items-center justify-center gap-3 hover:scale-[1.01] transition-all shadow-2xl shadow-primary/20 disabled:opacity-70 disabled:cursor-not-allowed"
+                >
                   <MessageSquare size={20} />
-                  Send Message
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </button>
 
               </form>
