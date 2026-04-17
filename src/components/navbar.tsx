@@ -61,7 +61,7 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 className={`text-sm font-medium transition-colors relative group ${
-                  isActive ? "text-primary" : "text-gray-400"
+                  isActive ? "text-primary" : "text-white"
                 } hover:text-primary`}
               >
                 {link.name}

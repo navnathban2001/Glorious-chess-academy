@@ -134,7 +134,7 @@ export default function Home() {
                     </label>
                     <input
                       className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 focus:border-primary outline-none transition-all placeholder:text-gray-600 font-medium"
-                      placeholder="e.g. Satish Thakur"
+                      placeholder="e.g. Full Name"
                     />
                   </div>
 
@@ -144,7 +144,7 @@ export default function Home() {
                     </label>
                     <input
                       className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 focus:border-primary outline-none transition-all placeholder:text-gray-600 font-medium"
-                      placeholder="+91 XXXXX XXXXX"
+                      placeholder="+91 9887654321"
                     />
                   </div>
                 </div>
