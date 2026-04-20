@@ -217,15 +217,18 @@ export default function StudentPage() {
             custom={1}
             className="lg:w-1/2 flex justify-center"
           >
-            <div className="relative w-80 h-80 md:w-[450px] md:h-[450px] group">
-              <div className="absolute inset-0 bg-primary/20 rounded-[4rem] blur-3xl group-hover:bg-primary/30 transition-all duration-700" />
-              <div className="relative h-full w-full rounded-[4rem] overflow-hidden border border-white/10 glass flex items-center justify-center group-hover:border-primary/40 transition-all">
-                <Image
-                  src="/logo.png"
+            <div className="relative w-fit max-w-full mx-auto group">
+              {/* Back glow effect */}
+              <div className="absolute -inset-4 bg-primary/20 rounded-[3rem] blur-3xl group-hover:bg-primary/40 group-hover:scale-105 transition-all duration-700" />
+              
+              {/* Tight frame that naturally hugs the photo's exact aspect ratio */}
+              <div className="relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-primary/30 shadow-[0_0_40px_rgba(184,134,11,0.15)] group-hover:border-primary/50 transition-all mx-auto">
+                <img
+                  src="/student.jpeg"
                   alt="Student Excellence"
-                  fill
-                  className="object-contain p-16 transition-transform duration-700 group-hover:scale-110"
+                  className="w-auto h-auto max-w-[90vw] md:max-w-[550px] max-h-[400px] md:max-h-[500px] object-contain block transition-transform duration-700 group-hover:scale-[1.03]"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
               </div>
             </div>
           </motion.div>

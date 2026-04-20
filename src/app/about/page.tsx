@@ -150,14 +150,19 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="lg:w-1/2 flex justify-center"
           >
-            <div className="relative w-80 h-80 md:w-96 md:h-96 group">
-              <div className="absolute inset-0 bg-primary/20 rounded-3xl blur-2xl group-hover:bg-primary/30 transition-all duration-500" />
-              <div className="relative h-full w-full rounded-3xl overflow-hidden border border-white/10 glass flex items-center justify-center">
+            <div className="relative w-full max-w-lg group mx-auto">
+              {/* Back glow effect */}
+              <div className="absolute -inset-4 bg-primary/20 rounded-[3.5rem] blur-3xl group-hover:bg-primary/40 group-hover:scale-105 transition-all duration-700" />
+              
+              {/* Image Container */}
+              <div className="relative w-full rounded-[3rem] overflow-hidden border border-primary/30 shadow-[0_0_40px_rgba(184,134,11,0.15)] glass p-2 md:p-3">
                 <Image
-                  src="/logo.png"
+                  src="/aboutus.png"
                   alt="Glorious Chess Academy"
-                  fill
-                  className="object-contain p-12 transition-transform duration-700 group-hover:scale-110"
+                  width={800}
+                  height={800}
+                  className="w-full h-auto object-contain rounded-[2.5rem] transition-transform duration-700 group-hover:scale-[1.03]"
+                  priority
                 />
               </div>
             </div>
