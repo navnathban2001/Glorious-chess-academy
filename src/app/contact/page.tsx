@@ -40,7 +40,7 @@ export default function ContactPage() {
     }
   };
 
-  const handleContactSubmit = (e: React.FormEvent) => {
+  const handleContactSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const nameError = validateName(formData.name);
     const emailError = validateEmail(formData.email);
@@ -52,13 +52,39 @@ export default function ContactPage() {
     }
 
     setIsSubmitting(true);
-    setTimeout(() => {
-      alert("Your message has been sent successfully!");
-      setFormData({ name: "", email: "", subject: "General Inquiry", message: "" });
-      setErrors({ name: "", email: "", message: "" });
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert("Your message has been sent successfully!");
+        setFormData({ name: "", email: "", subject: "General Inquiry", message: "" });
+        setErrors({ name: "", email: "", message: "" });
+      } else {
+        const contentType = response.headers.get("content-type");
+        if (contentType && contentType.indexOf("application/json") !== -1) {
+          const errorData = await response.json();
+          alert(`Failed to send message: ${errorData.error || 'Unknown error'}`);
+        } else {
+          const text = await response.text();
+          console.error("Non-JSON Server Error Response:", text);
+          alert("Server error occurred. Please configure the .env.local file with EMAIL_USER and EMAIL_PASS if you haven't yet, and restart the server!");
+        }
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      alert("An error occurred. Please try again later.");
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
+  
 
   return (
     <main className="min-h-screen bg-black text-white selection:bg-primary/30 overflow-x-hidden">

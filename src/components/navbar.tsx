@@ -44,6 +44,7 @@ export default function Navbar() {
               src="/logo.png"
               alt="Glorious Chess Academy Logo"
               fill
+              sizes="64px"
               className="object-contain"
             />
           </div>
