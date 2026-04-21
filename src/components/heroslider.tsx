@@ -36,7 +36,7 @@ export default function HeroSlider() {
           transition={{ duration: 0.8 }}
           className="max-w-5xl pt-40"
         >
-          <h1 className="text-4xl md:text-6xl font-black mb-8 tracking-tighter leading-none uppercase italic">
+          <h1 className="text-3xl md:text-5xl font-black mb-8 tracking-tighter leading-none uppercase italic">
             {slides[0].title.split(" ").map((word, i) => (
               <span key={i} className={word === "FIDE-Rated" ? "text-primary" : ""}>
                 {word}{" "}

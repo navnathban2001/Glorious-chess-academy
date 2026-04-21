@@ -42,7 +42,7 @@ export default function AboutSection() {
           <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-bold uppercase tracking-widest mb-6">
              Why Choose Us
           </div>
-          <h2 className="text-4xl md:text-5xl font-black mb-10 leading-tight uppercase italic tracking-tighter">
+          <h2 className="text-2xl md:text-4xl font-black mb-10 leading-tight uppercase italic tracking-tighter">
             Elevate Your Game with <br />
             <span className="text-primary">FIDE Standards</span>
           </h2>

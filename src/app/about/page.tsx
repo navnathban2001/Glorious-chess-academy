@@ -87,9 +87,9 @@ export default function AboutPage() {
               <Star size={16} className="fill-current" /> Learn. Master. Checkmate!
             </div> */}
             
-            <h1 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter leading-[0.9] max-w-5xl mx-auto">
+            <h1 className="text-3xl md:text-5xl font-black italic uppercase tracking-tighter leading-[0.9] max-w-5xl mx-auto">
               About <br />
-              <span className="text-primary italic underline decoration-primary/20 underline-offset-8">Glorious Chess</span> <br />
+              <span className="text-primary italic">Glorious Chess</span> <br />
               Academy
             </h1>
             
@@ -179,7 +179,7 @@ export default function AboutPage() {
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-black uppercase tracking-[0.2em]">
               <ShieldCheck size={14} /> Who We Are
             </div>
-            <h2 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter leading-tight">
+            <h2 className="text-2xl md:text-4xl font-black italic uppercase tracking-tighter leading-tight">
               Pioneering <span className="text-primary underline decoration-primary/30 underline-offset-8">Chess Education</span>
             </h2>
             <div className="space-y-4 text-gray-400 text-lg leading-relaxed font-medium">
@@ -328,7 +328,7 @@ export default function AboutPage() {
             <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-black uppercase tracking-[0.2em] mb-4">
               Our Edge
             </div>
-            <h2 className="text-4xl md:text-5xl font-black italic uppercase tracking-tighter">Why We <span className="text-primary">Stand Out</span></h2>
+            <h2 className="text-2xl md:text-4xl font-black italic uppercase tracking-tighter">Why We <span className="text-primary">Stand Out</span></h2>
           </motion.div>
         </div>
 
@@ -409,7 +409,7 @@ export default function AboutPage() {
                 <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-black uppercase tracking-[0.2em]">
                   LEADERSHIP
                 </div>
-                <h2 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter leading-tight">
+                <h2 className="text-2xl md:text-4xl font-black italic uppercase tracking-tighter leading-tight">
                   The <span className="text-primary">Visionary</span> Behind The Pieces
                 </h2>
               </div>

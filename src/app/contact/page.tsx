@@ -106,9 +106,9 @@ export default function ContactPage() {
               <Star size={16} className="fill-current" /> Connect With Us
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter leading-[0.9] max-w-5xl mx-auto">
+            <h1 className="text-3xl md:text-5xl font-black italic uppercase tracking-tighter leading-[0.9] max-w-5xl mx-auto">
               Get In <br />
-              <span className="text-primary italic underline decoration-primary/20 underline-offset-8">Touch</span>
+              <span className="text-primary italic">Touch</span>
             </h1>
             
             <p className="text-gray-400 text-xl md:text-2xl max-w-3xl mx-auto font-medium leading-relaxed">
@@ -124,7 +124,7 @@ export default function ContactPage() {
           {/* Contact Info */}
           <div className="lg:w-1/3 space-y-12">
   <div>
-    <h2 className="text-4xl md:text-5xl font-black mb-8 italic uppercase tracking-tighter">
+    <h2 className="text-2xl md:text-4xl font-black mb-8 italic uppercase tracking-tighter">
       Reach <span className="text-primary italic">Out</span>
     </h2>
     <p className="text-gray-400 text-lg leading-relaxed font-medium capitalize">

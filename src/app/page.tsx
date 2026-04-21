@@ -62,9 +62,9 @@ export default function Home() {
               <Rocket size={16} /> Partner Opportunity
             </div>
 
-            <h2 className="text-4xl md:text-6xl font-black leading-[0.9] uppercase italic tracking-tighter max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-4xl font-black leading-[0.9] uppercase italic tracking-tighter max-w-4xl mx-auto">
               Start Your <br />
-              <span className="text-primary italic underline decoration-primary/20 underline-offset-8">Chess Academy</span> <br />
+              <span className="text-primary italic">Chess Academy</span> <br />
               With Us 
             </h2>
 
@@ -94,9 +94,9 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-6xl font-black leading-[0.9] italic uppercase tracking-tighter">
+              <h2 className="text-2xl md:text-4xl font-black leading-[0.9] italic uppercase tracking-tighter">
                 Book Your <br />
-                <span className="text-primary italic underline decoration-primary/20 underline-offset-8">Free Demo Class</span>
+                <span className="text-primary italic">Free Demo Class</span>
               </h2>
             </motion.div>
 

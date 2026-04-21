@@ -37,7 +37,7 @@ export default function BenefitsSection() {
     <section id="services" className="py-24 px-6 bg-black">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tight">
+          <h2 className="text-2xl md:text-4xl font-black mb-6 tracking-tight">
             WHY PLAY <span className="text-primary italic">CHESS?</span>
           </h2>
           <p className="text-gray-400 text-xl max-w-2xl mx-auto">

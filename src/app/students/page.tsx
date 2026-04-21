@@ -55,8 +55,8 @@ export default function StudentPage() {
               <Star size={16} className="fill-current" /> Learn. Master. Checkmate!
             </div> */}
             
-            <h1 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter leading-[0.9] max-w-5xl mx-auto">
-              Learn Chess from <span className="text-primary italic underline decoration-primary/20 underline-offset-8">Expert Coaches</span> & Build Winning Strategies
+            <h1 className="text-3xl md:text-5xl font-black italic uppercase tracking-tighter leading-[0.9] max-w-5xl mx-auto">
+              Learn Chess from <span className="text-primary italic">Expert Coaches</span> & Build Winning Strategies
             </h1>
             
             <p className="text-gray-400 text-xl md:text-2xl max-w-3xl mx-auto font-medium leading-relaxed">
@@ -86,7 +86,7 @@ export default function StudentPage() {
       <section className="py-24 px-6 bg-[#050505] border-y border-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black italic uppercase tracking-tighter">Why Learn <span className="text-primary">With Us</span></h2>
+            <h2 className="text-2xl md:text-4xl font-black italic uppercase tracking-tighter">Why Learn <span className="text-primary">With Us</span></h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -124,7 +124,7 @@ export default function StudentPage() {
         
         <div className="max-w-7xl mx-auto">
           <div className="mb-16">
-            <h2 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter leading-none">
+            <h2 className="text-2xl md:text-4xl font-black italic uppercase tracking-tighter leading-none">
               Our Learning <br /><span className="text-primary italic">Programs</span>
             </h2>
           </div>
@@ -190,7 +190,7 @@ export default function StudentPage() {
             viewport={{ once: true }}
             className="lg:w-1/2 space-y-8"
           >
-            <h2 className="text-4xl md:text-5xl font-black italic uppercase tracking-tighter">What You <span className="text-primary">Get</span></h2>
+            <h2 className="text-2xl md:text-4xl font-black italic uppercase tracking-tighter">What You <span className="text-primary">Get</span></h2>
             <div className="grid gap-6">
               {[
                 { title: "Live classes with expert coaches", icon: Users },
@@ -288,7 +288,7 @@ export default function StudentPage() {
       <section className="py-24 px-6 bg-[#050505] overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black italic uppercase tracking-tighter">Your Learning <span className="text-primary">Journey</span></h2>
+            <h2 className="text-2xl md:text-4xl font-black italic uppercase tracking-tighter">Your Learning <span className="text-primary">Journey</span></h2>
           </div>
 
           <div className="relative flex flex-col md:flex-row justify-between items-start gap-12">
@@ -338,7 +338,7 @@ export default function StudentPage() {
             </div>
 
             <div className="relative z-10 space-y-8">
-              <h2 className="text-4xl md:text-7xl font-black italic uppercase tracking-tighter leading-none">
+              <h2 className="text-2xl md:text-4xl font-black italic uppercase tracking-tighter leading-none">
                 Start Your Chess <br /> Journey Today
               </h2>
               <p className="text-xl md:text-2xl font-bold italic uppercase tracking-tight max-w-2xl mx-auto opacity-70">

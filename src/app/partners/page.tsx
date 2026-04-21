@@ -61,9 +61,9 @@ export default function PartnerPage() {
               <Rocket size={16} className="fill-current" /> Partner With Excellence
             </div> */}
             
-            <h1 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter leading-[0.9] max-w-5xl mx-auto">
+            <h1 className="text-3xl md:text-5xl font-black italic uppercase tracking-tighter leading-[0.9] max-w-5xl mx-auto">
               Build Your Own <br />
-              <span className="text-primary italic underline decoration-primary/20 underline-offset-8">Chess Academy</span> <br />
+              <span className="text-primary italic">Chess Academy</span> <br />
               & Grow With Us
             </h1>
             
@@ -130,7 +130,7 @@ export default function PartnerPage() {
       <section className="py-32 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeInUp} className="text-center mb-24">
-            <h2 className="text-4xl md:text-7xl font-black uppercase italic tracking-tighter mb-8">
+            <h2 className="text-2xl md:text-4xl font-black uppercase italic tracking-tighter mb-8">
               Why <span className="text-primary italic">Become a Partner?</span>
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-8" />
@@ -175,7 +175,7 @@ export default function PartnerPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
              <motion.div {...fadeInUp}>
-                <h2 className="text-4xl md:text-6xl font-black uppercase italic tracking-tighter mb-8">
+                <h2 className="text-2xl md:text-4xl font-black uppercase italic tracking-tighter mb-8">
                   Earning <span className="text-primary italic">Opportunity</span>
                 </h2>
                 <p className="text-2xl text-gray-400 mb-12 font-medium italic">Turn your passion for chess into a scalable business.</p>
@@ -236,7 +236,7 @@ export default function PartnerPage() {
           </motion.div>
 
           <motion.div {...fadeInUp} className="space-y-12 py-8">
-            <h2 className="text-4xl md:text-5xl font-black uppercase italic tracking-tighter">
+            <h2 className="text-2xl md:text-4xl font-black uppercase italic tracking-tighter">
               What <span className="text-primary italic">You Get</span>
             </h2>
             <div className="space-y-8">
@@ -266,7 +266,7 @@ export default function PartnerPage() {
       <section className="py-32 bg-[#0a0a0a] border-y border-white/5 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeInUp} className="text-center mb-24">
-            <h2 className="text-4xl md:text-7xl font-black uppercase italic tracking-tighter mb-8 leading-tight">
+            <h2 className="text-2xl md:text-4xl font-black uppercase italic tracking-tighter mb-8 leading-tight">
               Why This Opportunity <br /> is <span className="text-primary italic">Growing</span>
             </h2>
           </motion.div>
@@ -293,7 +293,7 @@ export default function PartnerPage() {
       {/* How It Works */}
       <section className="py-32 px-6">
         <div className="max-w-7xl mx-auto">
-           <motion.h2 {...fadeInUp} className="text-4xl md:text-6xl font-black text-center mb-24 italic uppercase tracking-tighter">
+           <motion.h2 {...fadeInUp} className="text-2xl md:text-4xl font-black text-center mb-24 italic uppercase tracking-tighter">
              How It <span className="text-primary italic">Works</span>
            </motion.h2>
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -325,7 +325,7 @@ export default function PartnerPage() {
       <section className="py-32 px-6 bg-[#080808]">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20">
           <motion.div {...fadeInUp}>
-             <h2 className="text-4xl md:text-5xl font-black uppercase italic tracking-tighter mb-12">Our <span className="text-primary italic">Strength</span></h2>
+             <h2 className="text-2xl md:text-4xl font-black uppercase italic tracking-tighter mb-12">Our <span className="text-primary italic">Strength</span></h2>
              <div className="space-y-4">
                 {[
                   "Rapidly growing presence across India with high standards",
@@ -342,7 +342,7 @@ export default function PartnerPage() {
           </motion.div>
 
           <motion.div {...fadeInUp}>
-             <h2 className="text-4xl md:text-5xl font-black uppercase italic tracking-tighter mb-12">Support <span className="text-primary italic">You Receive</span></h2>
+             <h2 className="text-2xl md:text-4xl font-black uppercase italic tracking-tighter mb-12">Support <span className="text-primary italic">You Receive</span></h2>
              <div className="space-y-4">
                 {[
                   "Marketing & lead generation support from our central team",
@@ -368,7 +368,7 @@ export default function PartnerPage() {
         
         <div className="max-w-5xl mx-auto relative z-10 glass p-16 md:p-24 rounded-[4rem] border-primary/20 text-center">
            <motion.div {...fadeInUp}>
-              <h2 className="text-4xl md:text-7xl font-black uppercase italic tracking-tighter mb-8 leading-tight">
+              <h2 className="text-2xl md:text-4xl font-black uppercase italic tracking-tighter mb-8 leading-tight">
                 Start Your Journey as a <br /> <span className="text-primary italic">Chess Partner Today</span>
               </h2>
               <p className="text-xl text-gray-500 mb-12 max-w-2xl mx-auto font-medium">

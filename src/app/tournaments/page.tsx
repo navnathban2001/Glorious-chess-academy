@@ -60,9 +60,9 @@ export default function TournamentPage() {
               <Trophy size={16} className="fill-current" /> Compete. Perform. Win.
             </div> */}
             
-            <h1 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter leading-[0.9] max-w-5xl mx-auto">
+            <h1 className="text-3xl md:text-5xl font-black italic uppercase tracking-tighter leading-[0.9] max-w-5xl mx-auto">
               Test Your Skills In <br />
-              Competitive <span className="text-primary italic underline decoration-primary/20 underline-offset-8">Tournaments</span>
+              Competitive <span className="text-primary italic">Tournaments</span>
             </h1>
             
             <p className="text-gray-400 text-xl md:text-2xl max-w-3xl mx-auto font-medium leading-relaxed">
@@ -112,7 +112,7 @@ export default function TournamentPage() {
               <div className="inline-block px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-black uppercase tracking-[0.2em]">
                 Benefits
               </div>
-              <h2 className="text-4xl md:text-5xl font-black italic uppercase tracking-tighter">
+              <h2 className="text-2xl md:text-4xl font-black italic uppercase tracking-tighter">
                 Why Participate <br /> <span className="text-accent">In Our Tournaments</span>
               </h2>
               <ul className="space-y-4">
@@ -147,7 +147,7 @@ export default function TournamentPage() {
               <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-black uppercase tracking-[0.2em]">
                 Excellence
               </div>
-              <h2 className="text-4xl md:text-5xl font-black italic uppercase tracking-tighter">
+              <h2 className="text-2xl md:text-4xl font-black italic uppercase tracking-tighter">
                 Tournament <br /> <span className="text-primary">Features</span>
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
@@ -182,7 +182,7 @@ export default function TournamentPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter">
+            <h2 className="text-2xl md:text-4xl font-black italic uppercase tracking-tighter">
                Recognition & <span className="text-primary">Rewards</span>
             </h2>
             <p className="text-gray-400 text-xl font-medium mt-4 max-w-2xl mx-auto">
@@ -229,7 +229,7 @@ export default function TournamentPage() {
                  whileInView="visible"
                  viewport={{ once: true }}
               >
-                 <h2 className="text-3xl md:text-5xl font-black uppercase italic tracking-tighter mb-8 leading-tight">
+                 <h2 className="text-2xl md:text-4xl font-black uppercase italic tracking-tighter mb-8 leading-tight">
                     Skill Development <br /> <span className="text-accent">Through Competition</span>
                  </h2>
                  <p className="text-gray-400 font-medium text-lg xl:text-xl mb-10">Tournaments help you:</p>
@@ -283,7 +283,7 @@ export default function TournamentPage() {
       <section className="py-24 px-6 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-black italic uppercase tracking-tighter">How to <span className="text-primary">Participate</span></h2>
+            <h2 className="text-2xl md:text-4xl font-black italic uppercase tracking-tighter">How to <span className="text-primary">Participate</span></h2>
           </div>
 
           <div className="relative flex flex-col md:flex-row justify-between items-start gap-12">
@@ -327,7 +327,7 @@ export default function TournamentPage() {
                viewport={{ once: true }}
                className="text-center mb-16"
             >
-               <h2 className="text-4xl md:text-5xl font-black uppercase italic tracking-tighter mb-4">
+               <h2 className="text-2xl md:text-4xl font-black uppercase italic tracking-tighter mb-4">
                   Who Can <span className="text-primary italic">Participate</span>
                </h2>
                <div className="inline-block bg-white/5 border border-white/10 px-6 py-2 rounded-full font-bold uppercase tracking-widest text-sm text-gray-400">
@@ -377,7 +377,7 @@ export default function TournamentPage() {
             </div>
 
             <div className="relative z-10 space-y-8">
-              <h2 className="text-5xl md:text-7xl font-black italic uppercase tracking-tighter leading-none">
+              <h2 className="text-2xl md:text-4xl font-black italic uppercase tracking-tighter leading-none">
                 Ready to Compete?
               </h2>
               

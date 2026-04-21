@@ -65,9 +65,9 @@ export default function CoursesPage() {
               <Sparkles className="text-primary" size={16} /> Learn. Master. Checkmate!
             </div> */}
             
-            <h1 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter leading-[1] max-w-5xl mx-auto">
+            <h1 className="text-3xl md:text-5xl font-black italic uppercase tracking-tighter leading-[1] max-w-5xl mx-auto">
               Structured Chess <br />
-              <span className="text-primary italic underline decoration-primary/20 underline-offset-8">Programs</span> <br />
+              <span className="text-primary italic">Programs</span> <br />
               for Every Level
             </h1>
             
@@ -130,7 +130,7 @@ export default function CoursesPage() {
         <div className="max-w-7xl mx-auto">
            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
               <motion.div {...fadeInUp}>
-                 <h2 className="text-4xl md:text-6xl font-black uppercase italic tracking-tighter mb-8">
+                 <h2 className="text-2xl md:text-4xl font-black uppercase italic tracking-tighter mb-8">
                    Our Learning <span className="text-primary italic">Approach</span>
                  </h2>
                  <p className="text-xl text-gray-400 mb-12 font-medium leading-relaxed">
@@ -175,7 +175,7 @@ export default function CoursesPage() {
       <section className="py-32 bg-[#080808]">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div {...fadeInUp} className="text-center mb-24">
-             <h2 className="text-4xl md:text-7xl font-black uppercase italic tracking-tighter mb-8">
+             <h2 className="text-2xl md:text-4xl font-black uppercase italic tracking-tighter mb-8">
                Our <span className="text-primary italic">Courses</span>
              </h2>
              <div className="w-24 h-1 bg-primary mx-auto" />
@@ -261,7 +261,7 @@ export default function CoursesPage() {
       <section className="py-32 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20">
           <motion.div {...fadeInUp}>
-             <h2 className="text-4xl md:text-5xl font-black uppercase italic tracking-tighter mb-12">What <span className="text-primary italic">You Get</span></h2>
+             <h2 className="text-2xl md:text-4xl font-black uppercase italic tracking-tighter mb-12">What <span className="text-primary italic">You Get</span></h2>
              <div className="space-y-6">
                {[
                  { t: "Live interactive classes", d: "Real-time guidance with expert mentors.", i: Video },
@@ -288,7 +288,7 @@ export default function CoursesPage() {
                 <Trophy size={16} />
                 Competition Excellence
              </div>
-             <h2 className="text-4xl md:text-5xl font-black uppercase italic tracking-tighter mb-12">Tournaments & <br /> <span className="text-primary italic">Certification</span></h2>
+             <h2 className="text-2xl md:text-4xl font-black uppercase italic tracking-tighter mb-12">Tournaments & <br /> <span className="text-primary italic">Certification</span></h2>
              <div className="space-y-10 flex-1">
                 {[
                   { t: "Regular Online Tournaments", d: "Compete with students across the platform." },
@@ -317,7 +317,7 @@ export default function CoursesPage() {
       <section className="py-32 bg-[#0a0a0a] border-y border-white/5 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeInUp} className="text-center mb-24">
-             <h2 className="text-4xl md:text-7xl font-black uppercase italic tracking-tighter mb-4">
+             <h2 className="text-2xl md:text-4xl font-black uppercase italic tracking-tighter mb-4">
                Skills You Will <span className="text-primary italic">Develop</span>
              </h2>
              <p className="text-xl text-gray-500 font-medium italic">Chess is more than a game—it's a tool for brain development.</p>
@@ -349,7 +349,7 @@ export default function CoursesPage() {
       <section className="py-32 px-6">
         <div className="max-w-7xl mx-auto">
            <motion.div {...fadeInUp} className="text-center mb-24">
-             <h2 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter">Your Learning <br /> <span className="text-primary italic">Journey</span></h2>
+             <h2 className="text-2xl md:text-4xl font-black italic uppercase tracking-tighter">Your Learning <br /> <span className="text-primary italic">Journey</span></h2>
            </motion.div>
            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 relative">
               {[
@@ -385,7 +385,7 @@ export default function CoursesPage() {
         <div className="max-w-7xl mx-auto">
            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
               <motion.div {...fadeInUp}>
-                 <h2 className="text-4xl md:text-6xl font-black uppercase italic tracking-tighter mb-12">Why Our Courses <br /> <span className="text-primary italic">Stand Out</span></h2>
+                 <h2 className="text-2xl md:text-4xl font-black uppercase italic tracking-tighter mb-12">Why Our Courses <br /> <span className="text-primary italic">Stand Out</span></h2>
                  <div className="space-y-6">
                     {[
                       "Structured & progressive curriculum tailored for growth",
@@ -425,7 +425,7 @@ export default function CoursesPage() {
         
         <div className="max-w-4xl mx-auto relative z-10 glass p-16 md:p-24 rounded-[4rem] border-white/10 text-center">
            <motion.div {...fadeInUp}>
-              <h2 className="text-4xl md:text-7xl font-black uppercase italic tracking-tighter mb-8 leading-tight">
+              <h2 className="text-2xl md:text-4xl font-black uppercase italic tracking-tighter mb-8 leading-tight">
                 Start Your Chess <br /> <span className="text-primary italic">Journey Today</span>
               </h2>
               <div className="flex flex-col md:flex-row gap-6 justify-center">

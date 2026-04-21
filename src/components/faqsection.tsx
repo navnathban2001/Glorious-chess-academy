@@ -49,7 +49,7 @@ export default function FAQSection() {
           <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-bold uppercase tracking-widest mb-6">
             Everything You Need To Know
           </div>
-          <h2 className="text-4xl md:text-5xl font-black mb-6">
+          <h2 className="text-2xl md:text-4xl font-black mb-6">
             FREQUENTLY ASKED <span className="text-primary italic">QUESTIONS</span>
           </h2>
         </div>

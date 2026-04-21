@@ -46,7 +46,7 @@ export default function CoursesSection() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 px-4">
           <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tight italic">
+            <h2 className="text-2xl md:text-4xl font-black mb-6 tracking-tight italic">
               OUR <span className="text-primary">PROGRAMS</span>
             </h2>
             <p className="text-gray-400 text-xl leading-relaxed">
