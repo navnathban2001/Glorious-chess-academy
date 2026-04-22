@@ -39,23 +39,23 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-4 group">
-          <div className="relative w-16 h-16">
+        <Link href="/" className="flex items-center space-x-2 md:space-x-4 group shrink-0">
+          <div className="relative w-12 h-12 md:w-16 md:h-16">
             <Image
               src="/logo.png"
               alt="Glorious Chess Academy Logo"
               fill
-              sizes="64px"
+              sizes="(max-width: 768px) 48px, 64px"
               className="object-contain"
             />
           </div>
-          <span className="text-2xl font-black tracking-tight uppercase leading-none">
+          <span className="text-lg xl:text-2xl font-black tracking-tight uppercase leading-none">
             GLORIOUS CHESS <br />
             <span className="text-primary italic">ACADEMY</span>
           </span>
         </Link>
 
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden lg:flex items-center lg:space-x-4 xl:space-x-8 lg:ml-12">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
@@ -86,7 +86,7 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden text-foreground"
+          className="lg:hidden text-foreground"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -100,7 +100,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass border-t border-white/10"
+            className="lg:hidden glass border-t border-white/10"
           >
             <div className="flex flex-col p-6 space-y-4">
               {navLinks.map((link) => {

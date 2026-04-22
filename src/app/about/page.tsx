@@ -119,7 +119,7 @@ export default function AboutPage() {
       {/* ── Sub Navigation ── */}
       <div className={`sticky top-[72px] z-40 transition-all duration-300 ${isScrolled ? "bg-black/80 backdrop-blur-md border-b border-primary/20 py-2" : "bg-transparent py-4 opacity-0 pointer-events-none"}`}>
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center justify-center gap-2 md:gap-8 overflow-x-auto no-scrollbar">
+          <div className="flex items-center justify-center gap-2 md:gap-4 lg:gap-8 overflow-x-auto no-scrollbar">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -288,7 +288,7 @@ export default function AboutPage() {
             >
               <Target className="absolute -top-10 -right-10 w-48 h-48 text-primary/5 group-hover:text-primary/10 transition-colors" />
               <div className="relative z-10">
-                <h2 className="text-primary text-6xl font-black italic mb-6">VISION</h2>
+                <h2 className="text-primary text-4xl md:text-6xl font-black italic mb-6">VISION</h2>
                 <p className="text-2xl text-white font-medium leading-tight">
                   To become a leading chess learning platform across India, building a strong ecosystem where students, coaches, and partners grow together.
                 </p>
@@ -306,7 +306,7 @@ export default function AboutPage() {
             >
               <Trophy className="absolute -top-10 -right-10 w-48 h-48 text-accent/5 group-hover:text-accent/10 transition-colors" />
               <div className="relative z-10">
-                <h2 className="text-accent text-6xl font-black italic mb-6">MISSION</h2>
+                <h2 className="text-accent text-4xl md:text-6xl font-black italic mb-6">MISSION</h2>
                 <p className="text-2xl text-white font-medium leading-tight">
                   To nurture future champions by delivering high-quality chess education, expert mentorship, and competitive exposure at every level.
                 </p>

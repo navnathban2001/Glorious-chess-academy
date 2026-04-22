@@ -73,7 +73,7 @@ export default function Footer() {
             </li>
             <li className="flex gap-4">
               <Mail className="text-primary flex-shrink-0" size={20} />
-              <span className="text-gray-500">support@gloriouschessacademy.com</span>
+              <span className="text-gray-500">support@gloriouschess.com</span>
             </li>
             <li className="flex gap-4">
               <MapPin className="text-primary flex-shrink-0" size={20} />
@@ -102,7 +102,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto border-t border-white/5 pt-8 flex flex-col md:row justify-between items-center text-sm text-gray-600">
+      <div className="max-w-7xl mx-auto border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
         <p>© 2024 Glorious Chess Academy. All rights reserved.</p>
         <div className="flex space-x-6 mt-4 md:mt-0">
           <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>

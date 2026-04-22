@@ -17,7 +17,7 @@ export default function HeroSlider() {
   const current = 0;
 
   return (
-    <div className="relative h-screen w-full overflow-hidden bg-black">
+    <div className="relative h-[100dvh] w-full overflow-hidden bg-black">
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-black/60 z-10" />
         <Image
@@ -36,14 +36,14 @@ export default function HeroSlider() {
           transition={{ duration: 0.8 }}
           className="max-w-5xl pt-40"
         >
-          <h1 className="text-3xl md:text-5xl font-black mb-8 tracking-tighter leading-none uppercase italic">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl font-black mb-8 tracking-tighter leading-tight uppercase italic">
             {slides[0].title.split(" ").map((word, i) => (
               <span key={i} className={word === "FIDE-Rated" ? "text-primary" : ""}>
                 {word}{" "}
               </span>
             ))}
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-12 font-medium max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-2xl text-gray-300 mb-12 font-medium max-w-3xl mx-auto leading-relaxed">
             {slides[0].subtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">

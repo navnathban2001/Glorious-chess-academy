@@ -89,7 +89,7 @@ export default function StudentPage() {
             <h2 className="text-2xl md:text-4xl font-black italic uppercase tracking-tighter">Why Learn <span className="text-primary">With Us</span></h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { title: "Expert Coaches", desc: "Learn from professional & FIDE-level trained coaches with years of experience.", icon: ShieldCheck },
               { title: "Structured Curriculum", desc: "A clear roadmap from Beginner to Advanced levels based on global standards.", icon: BookOpen },
@@ -129,7 +129,7 @@ export default function StudentPage() {
             </h2>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 level: "Beginner",
@@ -291,9 +291,9 @@ export default function StudentPage() {
             <h2 className="text-2xl md:text-4xl font-black italic uppercase tracking-tighter">Your Learning <span className="text-primary">Journey</span></h2>
           </div>
 
-          <div className="relative flex flex-col md:flex-row justify-between items-start gap-12">
+          <div className="relative flex flex-col lg:flex-row justify-between items-start gap-12">
             {/* Connector Line */}
-            <div className="absolute top-[60px] left-1/2 -translate-x-1/2 md:translate-x-0 md:left-20 right-20 h-[2px] bg-white/10 hidden md:block" />
+            <div className="absolute top-[60px] left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-20 right-20 h-[2px] bg-white/10 hidden lg:block" />
             
             {[
               { step: "01", title: "Enroll / Book Demo", desc: "Start with a free assessment session." },
@@ -309,7 +309,7 @@ export default function StudentPage() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 custom={idx}
-                className="relative z-10 flex-1 text-center md:text-left"
+                className="relative z-10 flex-1 text-center lg:text-left"
               >
                 <div className="w-16 h-16 rounded-full bg-black border-4 border-primary/40 flex items-center justify-center text-primary font-black mb-6 mx-auto md:mx-0 shadow-[0_0_20px_rgba(184,134,11,0.2)]">
                   {step.step}

@@ -262,8 +262,10 @@ export default function TournamentPage() {
                        <Trophy size={200} className="text-primary" />
                     </div>
                     <div className="relative z-10 space-y-6">
-                       <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/50 backdrop-blur-sm border border-primary/20 text-primary text-xs font-black uppercase tracking-[0.2em]">
-                          <Star size={14} className="fill-current" /> Expert Guidance
+                       <div className="flex items-center gap-2 md:gap-4 overflow-x-auto no-scrollbar">
+                         <div className="px-4 py-2 rounded-full bg-black/50 backdrop-blur-sm border border-primary/20 text-primary text-xs font-black uppercase tracking-[0.2em] whitespace-nowrap">
+                            <Star size={14} className="fill-current inline mr-1" /> Expert Guidance
+                         </div>
                        </div>
                        <h3 className="text-3xl md:text-4xl font-black italic uppercase text-white leading-tight">
                           Guided by Professional <span className="text-primary">Coaching</span>
@@ -286,9 +288,9 @@ export default function TournamentPage() {
             <h2 className="text-2xl md:text-4xl font-black italic uppercase tracking-tighter">How to <span className="text-primary">Participate</span></h2>
           </div>
 
-          <div className="relative flex flex-col md:flex-row justify-between items-start gap-12">
+          <div className="relative flex flex-col lg:flex-row justify-between items-start gap-12">
             {/* Connector Line */}
-            <div className="absolute top-[32px] left-1/2 -translate-x-1/2 md:translate-x-0 md:left-[10%] right-[10%] h-[2px] bg-white/10 hidden md:block" />
+            <div className="absolute top-[32px] left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-[10%] right-[10%] h-[2px] bg-white/10 hidden lg:block" />
             
             {[
               { step: "1", title: "Register", desc: "Sign up for the tournament" },
@@ -304,7 +306,7 @@ export default function TournamentPage() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 custom={idx}
-                className="relative z-10 flex-1 text-center md:text-left flex flex-col items-center md:items-start"
+                className="relative z-10 flex-1 text-center lg:text-left flex flex-col items-center lg:items-start"
               >
                 <div className="w-16 h-16 rounded-full bg-black border-4 border-primary flex items-center justify-center text-primary text-2xl font-black mb-6 shadow-[0_0_20px_rgba(184,134,11,0.3)]">
                   {step.step}

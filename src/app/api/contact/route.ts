@@ -21,7 +21,7 @@ export async function POST(req: Request) {
 
     const mailOptions = {
       from: `"${name}" <${process.env.EMAIL_USER}>`, 
-      to: 'support@gloriouschessacademy.com',
+      to: 'support@gloriouschess.com',
       replyTo: email,
       subject: `New Contact Form Submission: ${subject}`,
       text: `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${message}`,

@@ -181,7 +181,7 @@ export default function CoursesPage() {
              <div className="w-24 h-1 bg-primary mx-auto" />
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 level: "Beginner Level",

@@ -135,7 +135,7 @@ export default function ContactPage() {
   <div className="flex flex-col gap-4">
     {[
       { icon: Phone, label: "Call Us", text: "+91 76208 57664" },
-      { icon: Mail, label: "Email Support", text: "support@gloriouschessacademy.com" },
+      { icon: Mail, label: "Email Support", text: "support@gloriouschess.com" },
       {
         icon: MapPin,
         label: "Our Office",

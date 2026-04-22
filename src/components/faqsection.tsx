@@ -64,7 +64,7 @@ export default function FAQSection() {
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
                 className="w-full px-8 py-6 text-left flex justify-between items-center group"
               >
-                <span className="text-xl font-bold group-hover:text-primary transition-colors pr-6">
+                <span className="text-lg md:text-xl font-bold group-hover:text-primary transition-colors pr-6">
                   {faq.question}
                 </span>
                 <motion.div

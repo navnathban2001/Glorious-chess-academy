@@ -83,7 +83,7 @@ export default function CoursesSection() {
                   </span>
                 </div>
 
-                <h3 className="text-3xl font-bold mb-6 italic">{course.title}</h3>
+                <h3 className="text-2xl md:text-3xl font-bold mb-6 italic">{course.title}</h3>
                 
                 <p className="text-gray-400 text-lg leading-relaxed mb-10 min-h-[5rem]">
                   {course.description}
