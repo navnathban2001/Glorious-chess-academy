@@ -363,48 +363,41 @@ export default function AboutPage() {
       {/* ── Founder's Message / Leadership ── */}
       <section id="founder" className="py-24 px-6 relative bg-gradient-to-b from-black to-[#0a0a0a] border-t border-white/5">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-20 items-start">
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-start">
             {/* Left: Identity */}
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="lg:w-1/3 sticky top-32"
-            >
-              <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden border border-white/10 group">
-                <Image
-                  src="/logo.png"
-                  alt="Mr. Satish Thakur"
-                  fill
-                  className="object-contain p-12 bg-[#0d0d0d]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
-                <div className="absolute bottom-10 left-10">
-                  <h3 className="text-3xl font-black italic uppercase tracking-tighter">Mr. Satish Thakur</h3>
-                  <p className="text-primary font-bold tracking-widest uppercase text-sm mt-1">Founder Glorious Chess Academy</p>
-                </div>
-              </div>
-              
-              <div className="mt-8 space-y-4">
-                <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10">
-                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
-                    <Award size={20} />
+              <motion.div
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="w-full lg:w-1/3"
+              >
+                <div className="relative aspect-square sm:aspect-video lg:aspect-[4/5] rounded-[2rem] lg:rounded-[2.5rem] overflow-hidden border border-white/10 group">
+                  <Image
+                    src="/logo.png"
+                    alt="Mr. Satish Thakur"
+                    fill
+                    className="object-contain p-8 lg:p-12 bg-[#0d0d0d]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
+                  <div className="absolute bottom-6 left-6 lg:bottom-10 lg:left-10">
+                    <h3 className="text-2xl lg:text-3xl font-black italic uppercase tracking-tighter">Mr. Satish Thakur</h3>
+                    <p className="text-primary font-bold tracking-widest uppercase text-xs lg:text-sm mt-1">Founder Glorious Chess Academy</p>
                   </div>
-                  <p className="text-sm font-medium text-gray-300">Maharashtra Chess Association Associate</p>
                 </div>
-              </div>
+              
+
             </motion.div>
 
             {/* Right: Story */}
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              custom={1}
-              className="lg:w-2/3 space-y-12"
-            >
+              <motion.div
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                custom={1}
+                className="w-full lg:w-2/3 space-y-8 lg:space-y-12"
+              >
               <div className="space-y-6">
                 <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-black uppercase tracking-[0.2em]">
                   LEADERSHIP
@@ -465,9 +458,13 @@ export default function AboutPage() {
               {/* Closing */}
               <div className="p-8 rounded-3xl bg-primary text-black">
                 <p className="text-xl font-black italic uppercase">
-                  At Glorious Chess Academy, we don’t just teach chess we help you Learn. Master. Checkmate!
+                  At Glorious Chess Academy, we don’t just teach content — we help you Learn. Master. Checkmate!
                 </p>
-                <p className="mt-4 font-bold">Mr. Satish Thakur</p>
+                <div className="mt-6">
+                  <p className="font-black text-lg uppercase tracking-tight">Mr. Satish Thakur</p>
+                  <p className="text-sm font-bold opacity-80 uppercase tracking-widest">Founder, Glorious Chess Academy</p>
+                  <p className="text-xs font-bold opacity-60 uppercase mt-1">Maharashtra Chess Association Associate</p>
+                </div>
               </div>
             </motion.div>
           </div>
